@@ -9,7 +9,7 @@ import { getTranslations } from 'next-intl/server'
 import { mockAbout, mockGallery, mockContact, mockHero, socialInstagramUrl } from '@/data/mockData'
 import { coerceLocale } from '@/lib/locale'
 import { getSiteUrl } from '@/lib/site'
-import { localeAlternates } from '@/lib/seo'
+import { localeAlternates, localizedPath } from '@/lib/seo'
 
 type HomeProps = { params: Promise<{ locale: string }> }
 
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: HomeProps): Promise<Metadata>
     openGraph: {
       title,
       description,
-      url: `/${locale}`,
+      url: localizedPath(locale, []),
       type: 'website',
     },
   }
@@ -74,7 +74,7 @@ export default async function Home({ params }: HomeProps) {
         '@type': 'ProfessionalService',
         '@id': `${baseUrl}/#business`,
         name: siteTitle,
-        url: `${baseUrl}/${locale}`,
+        url: `${baseUrl}${localizedPath(locale, [])}`,
         image: `${baseUrl}/asimina-habipi-photographer-in-oslo.jpg`,
         logo: `${baseUrl}/asimina-habipi-logo.png`,
         address: {
@@ -89,7 +89,7 @@ export default async function Home({ params }: HomeProps) {
         '@type': 'Person',
         '@id': `${baseUrl}/#person`,
         name: 'Asimina Habipi',
-        url: `${baseUrl}/${locale}`,
+        url: `${baseUrl}${localizedPath(locale, [])}`,
         image: `${baseUrl}/asimina-habipi-photographer-in-oslo.jpg`,
         jobTitle: 'Photographer',
         worksFor: { '@id': `${baseUrl}/#business` },

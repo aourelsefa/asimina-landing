@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { getTranslations } from 'next-intl/server'
 import { categories } from '@/data/categories'
 import { coerceLocale } from '@/lib/locale'
-import { localeAlternates } from '@/lib/seo'
+import { localeAlternates, localizedPath } from '@/lib/seo'
 
 type Props = {
   children: ReactNode
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: `/${locale}/${cat.slug}`,
+      url: localizedPath(locale, [cat.slug]),
     },
   }
 }

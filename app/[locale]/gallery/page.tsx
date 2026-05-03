@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { mockGallery } from '@/data/mockData'
 import { coerceLocale } from '@/lib/locale'
-import { localeAlternates } from '@/lib/seo'
+import { localeAlternates, localizedPath } from '@/lib/seo'
 
 type GalleryProps = { params: Promise<{ locale: string }> }
 
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: GalleryProps): Promise<Metada
     openGraph: {
       title,
       description,
-      url: `/${locale}/gallery`,
+      url: localizedPath(locale, ['gallery']),
     },
   }
 }

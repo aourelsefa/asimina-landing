@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { categories } from '@/data/categories'
+import { categoryServiceCardAlt } from '@/data/mockData'
 
 /** Cover art per category — one image from each `public/<folder>`. */
 const serviceCoverById: Record<string, string> = {
@@ -49,7 +50,7 @@ export default function Categories() {
                   <div className="relative aspect-[3/4]">
                     <Image
                       src={src}
-                      alt={t('card.imageAlt', { name })}
+                      alt={categoryServiceCardAlt(cat.id)}
                       fill
                       className="object-cover opacity-90 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
                       sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"

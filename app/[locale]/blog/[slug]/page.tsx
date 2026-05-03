@@ -7,7 +7,7 @@ import { blogPosts, getPostBySlug, getAllSlugs } from '@/data/blogPosts'
 import { locales } from '@/i18n/routing'
 import { coerceLocale } from '@/lib/locale'
 import { getSiteUrl } from '@/lib/site'
-import { localeAlternates } from '@/lib/seo'
+import { localeAlternates, localizedPath } from '@/lib/seo'
 
 type Props = { params: Promise<{ locale: string; slug: string }> }
 
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      url: `/${locale}/blog/${post.slug}`,
+      url: localizedPath(locale, ['blog', post.slug]),
       images: [{ url: post.coverImage.src, alt: coverAlt }],
     },
     twitter: {
@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: Props) {
   const chapterNo = String(chapterIndex + 1).padStart(2, '0')
 
   const baseUrl = getSiteUrl()
-  const pageUrl = `${baseUrl}/${locale}/blog/${post.slug}`
+  const pageUrl = `${baseUrl}${localizedPath(locale, ['blog', post.slug])}`
   const imageUrl = post.coverImage.src.startsWith('http')
     ? post.coverImage.src
     : `${baseUrl}${post.coverImage.src}`

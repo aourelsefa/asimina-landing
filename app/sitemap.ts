@@ -3,6 +3,7 @@ import { blogSlugs } from '@/data/blogPosts'
 import { categoryIds } from '@/data/categories'
 import { locales } from '@/i18n/routing'
 import { getSiteUrl } from '@/lib/site'
+import { localizedPath } from '@/lib/seo'
 
 const staticSegments: (string | undefined)[] = [undefined, 'gallery', 'privacy', 'cookies']
 
@@ -12,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const locale of locales) {
     for (const seg of staticSegments) {
-      const path = seg ? `/${locale}/${seg}` : `/${locale}`
+      const path = localizedPath(locale, seg ? [seg] : [])
       entries.push({
         url: `${base}${path}`,
         lastModified: new Date(),
@@ -23,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     for (const cat of categoryIds) {
       entries.push({
-        url: `${base}/${locale}/${cat}`,
+        url: `${base}${localizedPath(locale, [cat])}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.75,
@@ -32,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     for (const slug of blogSlugs) {
       entries.push({
-        url: `${base}/${locale}/blog/${slug}`,
+        url: `${base}${localizedPath(locale, ['blog', slug])}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.65,

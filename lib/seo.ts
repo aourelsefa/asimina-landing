@@ -2,22 +2,32 @@ import type { Metadata } from 'next'
 import { defaultLocale, locales, type AppLocale } from '@/i18n/routing'
 
 /**
- * Canonical + hreflang for locale-prefixed routes.
- * @param segments path after locale, e.g. [] for home, ['gallery'], ['blog', 'slug']
+ * Public pathname (no origin) for `localePrefix: 'as-needed'`.
+ * Default locale (en) has no `/en` prefix; Norwegian uses `/nb/...`.
+ */
+export function localizedPath(locale: AppLocale, segments: string[]): string {
+  const suffix = segments.length ? `/${segments.join('/')}` : ''
+  if (locale === defaultLocale) {
+    return suffix ? suffix : '/'
+  }
+  return `/${locale}${suffix}`
+}
+
+/**
+ * Canonical + hreflang for localized routes.
+ * @param segments path segments after locale, e.g. [] for home, ['gallery'], ['blog', 'slug']
  */
 export function localeAlternates(
   locale: AppLocale,
   segments: string[],
 ): NonNullable<Metadata['alternates']> {
-  const suffix = segments.length ? `/${segments.join('/')}` : ''
-  const canonicalPath = `/${locale}${suffix}`
   const languages: Record<string, string> = {}
   for (const loc of locales) {
-    languages[loc] = `/${loc}${suffix}`
+    languages[loc] = localizedPath(loc, segments)
   }
-  languages['x-default'] = `/${defaultLocale}${suffix}`
+  languages['x-default'] = localizedPath(defaultLocale, segments)
   return {
-    canonical: canonicalPath,
+    canonical: localizedPath(locale, segments),
     languages,
   }
 }

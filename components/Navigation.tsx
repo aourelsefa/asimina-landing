@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
+import type { AppLocale } from '@/i18n/routing'
 import { mockContact } from '@/data/mockData'
+import { localizedPath } from '@/lib/seo'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 /** Smooth-scroll anchor offset — keep in sync with nav bar height (logo + vertical padding). */
@@ -14,9 +16,11 @@ function telHref(phone: string) {
   return `tel:${phone.replace(/[^\d+]/g, '')}`
 }
 
-/** Hash links off the homepage go to `/#section` so the home layout loads with the right anchor. */
-function navItemDestination(href: string) {
-  if (href.startsWith('#')) return `/${href}`
+/** Hash links from inner pages go to the localized home URL with the right fragment. */
+function navItemDestination(href: string, locale: AppLocale) {
+  if (href.startsWith('#')) {
+    return `${localizedPath(locale, [])}${href}`
+  }
   return href
 }
 
@@ -43,7 +47,7 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const locale = useLocale()
+  const locale = useLocale() as AppLocale
   const t = useTranslations('navigation')
   const siteT = useTranslations('site')
   const isHomePage = pathname === '/'
@@ -69,7 +73,7 @@ export default function Navigation() {
     
     // If not on homepage, navigate to homepage first
     if (!isHomePage) {
-      window.location.href = `/${locale}/${href}`
+      window.location.href = navItemDestination(href, locale)
       return
     }
     
@@ -164,7 +168,7 @@ export default function Navigation() {
                 )
                 if (!isHomePage) {
                   return (
-                    <Link key={item.href} href={navItemDestination(item.href)} className={linkClass}>
+                    <Link key={item.href} href={navItemDestination(item.href, locale)} className={linkClass}>
                       {item.label}
                       {underline}
                     </Link>
@@ -276,7 +280,7 @@ export default function Navigation() {
                 return (
                   <Link
                     key={item.href}
-                    href={navItemDestination(item.href)}
+                    href={navItemDestination(item.href, locale)}
                     className={mobileClass}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

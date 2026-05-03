@@ -3,7 +3,7 @@ import { LegalPageShell } from '@/components/legal/LegalPageShell'
 import { getTranslations } from 'next-intl/server'
 import { mockContact } from '@/data/mockData'
 import { coerceLocale } from '@/lib/locale'
-import { localeAlternates } from '@/lib/seo'
+import { localeAlternates, localizedPath } from '@/lib/seo'
 
 type PageProps = { params: Promise<{ locale: string }> }
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title,
       description,
-      url: `/${locale}/cookies`,
+      url: localizedPath(locale, ['cookies']),
     },
   }
 }
