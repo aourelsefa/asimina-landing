@@ -75,7 +75,6 @@ export const galleryImageFilenames = [
   "DSC_0357.jpg",
   "DSC_0549.jpg",
   "DSC_0688.jpg",
-  "DSC_0759.jpg",
   "DSC_3588.jpg",
   "DSC01268.jpg",
   "DSC01269.jpg",
