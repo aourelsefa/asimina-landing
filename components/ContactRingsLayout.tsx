@@ -56,6 +56,7 @@ export default function ContactRingsLayout({
     <section
       id={sectionId || undefined}
       className="relative overflow-hidden bg-white py-32 md:py-40 lg:py-44"
+      aria-labelledby="contact-section-heading"
     >
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[min(100vw,36rem)] w-[min(100vw,36rem)] -translate-x-1/2 -translate-y-1/2 md:h-[min(100vw,40rem)] md:w-[min(100vw,40rem)]">
         <div className="absolute inset-0 rounded-full border border-neutral-200/80" />
@@ -64,7 +65,9 @@ export default function ContactRingsLayout({
         <div className="absolute inset-[23%] rounded-full border border-neutral-200/30" />
       </div>
       <div className="relative mx-auto max-w-lg px-4 py-2 text-center md:py-4">
-        <h2 className="font-serif text-3xl text-neutral-900 md:text-5xl">{title}</h2>
+        <h2 id="contact-section-heading" className="font-serif text-3xl text-neutral-900 md:text-5xl">
+          {title}
+        </h2>
         <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-neutral-600 md:mt-8 md:text-base md:leading-relaxed">
           {lead}
         </p>

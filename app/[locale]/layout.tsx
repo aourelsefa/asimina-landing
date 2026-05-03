@@ -24,6 +24,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const messages = (await import(`../../messages/${locale}.json`)).default as any
   const siteTitle = messages.site?.title ?? 'Asimina Habipi Photography'
   const siteDescription = messages.site?.description
+  const rawKeywords = messages.site?.keywords
+  const keywords =
+    typeof rawKeywords === 'string'
+      ? rawKeywords
+          .split(',')
+          .map((k: string) => k.trim())
+          .filter(Boolean)
+      : undefined
 
   return {
     title: {
@@ -31,6 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       template: `%s | ${siteTitle}`,
     },
     description: siteDescription,
+    ...(keywords?.length ? { keywords } : {}),
     applicationName: siteTitle,
     robots: {
       index: true,

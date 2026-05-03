@@ -1,15 +1,20 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { headers } from 'next/headers'
+import { defaultSiteUrl } from '@/lib/site'
 import './globals.css'
 
 const GA_MEASUREMENT_ID = 'G-9GP0STRTEN'
 
-import { defaultSiteUrl } from '@/lib/site'
-
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
   (process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : defaultSiteUrl)
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#141414',
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

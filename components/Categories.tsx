@@ -18,11 +18,17 @@ export default function Categories() {
   const categoryT = useTranslations('categories.items')
 
   return (
-    <section id="categories" className="bg-[#f5f5f5] py-20 text-gray-900 md:py-28">
+    <section
+      id="categories"
+      className="bg-[#f5f5f5] py-20 text-gray-900 md:py-28"
+      aria-labelledby="categories-heading"
+    >
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-gray-500">{t('eyebrow')}</span>
-          <h2 className="mt-2 font-serif text-4xl font-bold text-gray-900 md:text-5xl">{t('title')}</h2>
+          <h2 id="categories-heading" className="mt-2 font-serif text-4xl font-bold text-gray-900 md:text-5xl">
+            {t('title')}
+          </h2>
           <p className="mt-3 text-gray-600">{t('description')}</p>
         </div>
       </div>

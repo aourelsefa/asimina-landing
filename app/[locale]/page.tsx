@@ -6,7 +6,7 @@ import ScrollingGallery from '@/components/ScrollingGallery'
 import Contact from '@/components/Contact'
 import BlogSection from '@/components/BlogSection'
 import { getTranslations } from 'next-intl/server'
-import { mockAbout, mockGallery, mockContact, mockHero } from '@/data/mockData'
+import { mockAbout, mockGallery, mockContact, mockHero, socialInstagramUrl } from '@/data/mockData'
 import { coerceLocale } from '@/lib/locale'
 import { getSiteUrl } from '@/lib/site'
 import { localeAlternates } from '@/lib/seo'
@@ -16,10 +16,24 @@ type HomeProps = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: HomeProps): Promise<Metadata> {
   const { locale: raw } = await params
   const locale = coerceLocale(raw)
-  const messages = (await import(`../../messages/${locale}.json`)).default as { site: { title: string; description: string } }
-  const { title, description } = messages.site
+  const messages = (await import(`../../messages/${locale}.json`)).default as {
+    site: { title: string; description: string; keywords?: string }
+  }
+  const { title, description, keywords: keywordsRaw } = messages.site
+  const keywords =
+    typeof keywordsRaw === 'string'
+      ? keywordsRaw
+          .split(',')
+          .map((k) => k.trim())
+          .filter(Boolean)
+      : []
 
   return {
+    title: {
+      absolute: title,
+    },
+    description,
+    ...(keywords.length ? { keywords } : {}),
     alternates: localeAlternates(locale, []),
     openGraph: {
       title,
@@ -69,6 +83,17 @@ export default async function Home({ params }: HomeProps) {
           addressCountry: 'NO',
         },
         areaServed: { '@type': 'City', name: 'Oslo' },
+        sameAs: [socialInstagramUrl],
+      },
+      {
+        '@type': 'Person',
+        '@id': `${baseUrl}/#person`,
+        name: 'Asimina Habipi',
+        url: `${baseUrl}/${locale}`,
+        image: `${baseUrl}/asimina-habipi-photographer-in-oslo.jpg`,
+        jobTitle: 'Photographer',
+        worksFor: { '@id': `${baseUrl}/#business` },
+        sameAs: [socialInstagramUrl],
       },
     ],
   }
@@ -93,11 +118,20 @@ export default async function Home({ params }: HomeProps) {
         }}
       />
       <Categories />
-      <section id="gallery" className="bg-[#1a1a1a] px-4 py-32">
+      <section
+        id="gallery"
+        className="bg-[#1a1a1a] px-4 py-32"
+        aria-labelledby="home-gallery-heading"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 text-center">
             <span className="text-sm text-white/70 uppercase tracking-widest font-medium mb-4 block">{homeT('eyebrow')}</span>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6">{homeT('title')}</h2>
+            <h2
+              id="home-gallery-heading"
+              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
+            >
+              {homeT('title')}
+            </h2>
             <div className="w-24 h-px bg-white/30 mx-auto" />
           </div>
           <ScrollingGallery images={mockGallery} variant="minimal" />

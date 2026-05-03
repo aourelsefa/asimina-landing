@@ -16,11 +16,17 @@ export default function BlogSection() {
   const postT = useTranslations('blog.posts')
 
   return (
-    <section id="blog" className="bg-[#f0efec] border-t border-gray-200/80 py-20 text-gray-900 md:py-28">
+    <section
+      id="blog"
+      className="bg-[#f0efec] border-t border-gray-200/80 py-20 text-gray-900 md:py-28"
+      aria-labelledby="blog-section-heading"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-gray-500">{t('eyebrow')}</span>
-          <h2 className="mt-2 font-serif text-4xl font-bold text-gray-900 md:text-5xl">{t('title')}</h2>
+          <h2 id="blog-section-heading" className="mt-2 font-serif text-4xl font-bold text-gray-900 md:text-5xl">
+            {t('title')}
+          </h2>
           <p className="mt-3 text-gray-600">{t('description')}</p>
         </div>
 

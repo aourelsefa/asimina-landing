@@ -45,7 +45,9 @@ export default function AboutPolaroidLayout({
                     sizes="(max-width: 640px) 96vw, 320px"
                   />
                 </div>
-                <p className="mt-3 text-center font-serif text-base italic text-stone-800 sm:mt-4 sm:text-lg">{title}</p>
+                <h2 className="mt-3 text-center font-serif text-base italic text-stone-800 sm:mt-4 sm:text-lg">
+                  {title}
+                </h2>
               </div>
             </div>
             <div className="w-full min-w-0 max-w-xl flex-1 rounded-lg border border-stone-300/80 bg-white p-6 shadow-md shadow-stone-900/5 md:max-w-none md:py-8 md:pl-2 md:pr-0">
