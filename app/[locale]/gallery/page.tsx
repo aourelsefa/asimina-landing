@@ -3,12 +3,26 @@ import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { mockGallery } from '@/data/mockData'
+import { coerceLocale } from '@/lib/locale'
+import { localeAlternates } from '@/lib/seo'
 
-export async function generateMetadata(): Promise<Metadata> {
+type GalleryProps = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: GalleryProps): Promise<Metadata> {
+  const { locale: raw } = await params
+  const locale = coerceLocale(raw)
   const t = await getTranslations('galleryPage.metadata')
+  const title = t('title')
+  const description = t('description')
   return {
-    title: t('title'),
-    description: t('description'),
+    title,
+    description,
+    alternates: localeAlternates(locale, ['gallery']),
+    openGraph: {
+      title,
+      description,
+      url: `/${locale}/gallery`,
+    },
   }
 }
 

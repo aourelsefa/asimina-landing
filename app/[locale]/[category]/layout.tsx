@@ -2,22 +2,33 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import { getTranslations } from 'next-intl/server'
 import { categories } from '@/data/categories'
+import { coerceLocale } from '@/lib/locale'
+import { localeAlternates } from '@/lib/seo'
 
 type Props = {
   children: ReactNode
-  params: Promise<{ category: string }>
+  params: Promise<{ locale: string; category: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { category } = await params
+  const { category, locale: raw } = await params
+  const locale = coerceLocale(raw)
   const cat = categories.find((c) => c.slug === category)
   if (!cat) {
     return { title: 'Not found' }
   }
   const t = await getTranslations('categories.items')
+  const title = t(`${cat.id}.pageTitle`)
+  const description = t(`${cat.id}.shortDescription`)
   return {
-    title: t(`${cat.id}.pageTitle`),
-    description: t(`${cat.id}.shortDescription`),
+    title,
+    description,
+    alternates: localeAlternates(locale, [cat.slug]),
+    openGraph: {
+      title,
+      description,
+      url: `/${locale}/${cat.slug}`,
+    },
   }
 }
 

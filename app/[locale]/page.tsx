@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Categories from '@/components/Categories'
@@ -6,15 +7,75 @@ import Contact from '@/components/Contact'
 import BlogSection from '@/components/BlogSection'
 import { getTranslations } from 'next-intl/server'
 import { mockAbout, mockGallery, mockContact, mockHero } from '@/data/mockData'
+import { coerceLocale } from '@/lib/locale'
+import { getSiteUrl } from '@/lib/site'
+import { localeAlternates } from '@/lib/seo'
 
-export default async function Home() {
+type HomeProps = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: HomeProps): Promise<Metadata> {
+  const { locale: raw } = await params
+  const locale = coerceLocale(raw)
+  const messages = (await import(`../../messages/${locale}.json`)).default as { site: { title: string; description: string } }
+  const { title, description } = messages.site
+
+  return {
+    alternates: localeAlternates(locale, []),
+    openGraph: {
+      title,
+      description,
+      url: `/${locale}`,
+      type: 'website',
+    },
+  }
+}
+
+export default async function Home({ params }: HomeProps) {
+  const { locale: raw } = await params
+  const locale = coerceLocale(raw)
   const heroT = await getTranslations('heroContent')
   const aboutT = await getTranslations('about')
   const contactT = await getTranslations('contact')
   const homeT = await getTranslations('home.gallerySection')
+  const messages = (await import(`../../messages/${locale}.json`)).default as { site: { title: string } }
+  const siteTitle = messages.site.title
+  const baseUrl = getSiteUrl()
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${baseUrl}/#website`,
+        name: siteTitle,
+        url: baseUrl,
+        description:
+          locale === 'nb'
+            ? 'Fotograf i Oslo: bryllup, par, familie, dåp, mote, arrangement og reklame.'
+            : 'Oslo photographer for weddings, couples, families, baptism, fashion, events, and advertising.',
+        inLanguage: locale === 'nb' ? 'nb-NO' : 'en-GB',
+        publisher: { '@id': `${baseUrl}/#business` },
+      },
+      {
+        '@type': 'ProfessionalService',
+        '@id': `${baseUrl}/#business`,
+        name: siteTitle,
+        url: `${baseUrl}/${locale}`,
+        image: `${baseUrl}/asimina-habipi-photographer-in-oslo.jpg`,
+        logo: `${baseUrl}/asimina-habipi-logo.png`,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Oslo',
+          addressCountry: 'NO',
+        },
+        areaServed: { '@type': 'City', name: 'Oslo' },
+      },
+    ],
+  }
 
   return (
     <main className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Hero
         title={heroT('title')}
         subtitle={heroT('subtitleHtml')}

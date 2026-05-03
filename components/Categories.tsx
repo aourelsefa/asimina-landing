@@ -5,7 +5,7 @@ import { categories } from '@/data/categories'
 
 /** Cover art per category — one image from each `public/<folder>`. */
 const serviceCoverById: Record<string, string> = {
-  wedding: '/wedding/2.jpg',
+  wedding: '/wedding/ASI_4389-2.jpg',
   'couples-family': '/Couples/DIO_6894.jpg',
   baptism: '/vaptism/vaptisi-kerkyrak-12.jpg',
   'fashion-portraits': '/fashion/DIO_2673.jpg',
