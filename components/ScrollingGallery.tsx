@@ -11,12 +11,26 @@ interface ScrollingGalleryProps {
   variant?: 'default' | 'minimal' | 'elegant'
 }
 
+/** Pick `count` frames spread across the full gallery so the strip reflects the whole set, not only the first names alphabetically. */
+function pickStripImages(images: WordPressImage[], count: number): WordPressImage[] {
+  const n = images.length
+  if (n === 0) return []
+  if (n <= count) return [...images]
+  const picks: WordPressImage[] = []
+  const segments = count - 1
+  for (let i = 0; i < count; i++) {
+    const idx = segments === 0 ? 0 : Math.round((i * (n - 1)) / segments)
+    picks.push(images[idx])
+  }
+  return picks
+}
+
 export default function ScrollingGallery({ images, variant = 'default' }: ScrollingGalleryProps) {
   const [isHovered, setIsHovered] = useState(false)
   const t = useTranslations('scrollingGallery')
-  
-  // Limit to 10 images and duplicate multiple times for seamless infinite loop
-  const limitedImages = images.slice(0, 10)
+
+  // Ten thumbnails sampled evenly across the same list as /gallery (not only slice(0, 10)).
+  const limitedImages = pickStripImages(images, 10)
   // Duplicate 3 times to ensure smooth infinite scroll
   const duplicatedImages = [...limitedImages, ...limitedImages, ...limitedImages]
 

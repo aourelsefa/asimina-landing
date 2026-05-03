@@ -8,7 +8,6 @@ export const galleryImageFilenames = [
   "_DSC0816.jpg",
   "_DSC0889.jpg",
   "10.jpg",
-  "2.jpg",
   "ASI_0163.jpg",
   "ASI_0302.jpg",
   "ASI_0324.jpg",
