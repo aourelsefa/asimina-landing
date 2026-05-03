@@ -41,7 +41,7 @@ function PinIcon({ className = 'h-4 w-4' }: { className?: string }) {
 }
 
 /**
- * Concentric ring decoration, link chips for email/phone, address line — white background.
+ * Concentric ring decoration, link chips for email/phone, address line. White background.
  */
 export default function ContactRingsLayout({
   title,

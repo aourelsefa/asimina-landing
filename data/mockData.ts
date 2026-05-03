@@ -77,7 +77,7 @@ export const mockGalleryByCategory: Record<CategoryId, WordPressImage[]> = {
 export const mockContact = {
   email: 'asiminahabipi@gmail.com',
   phone: '+47 925 25 988',
-  address: '123 Photography Street, Creative City, CC 12345',
+  address: 'Oslo',
 }
 
 /** Digits only, for `wa.me` / Viber deep links — matches `mockContact.phone`. */

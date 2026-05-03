@@ -128,14 +128,17 @@ export default function CategoryPage() {
                       >
                         <Image
                           src={image.source_url}
-                          alt={image.alt_text || `${pageTitle} — ${index + 1}`}
+                          alt={
+                            image.alt_text ||
+                            t('gridImageAlt', { pageTitle, index: index + 1 })
+                          }
                           width={w}
                           height={h}
                           className="pointer-events-none h-auto w-full object-cover transition duration-500 group-hover:scale-[1.02]"
                           sizes="(max-width: 640px) 33vw, (max-width: 1024px) 20vw, 14vw"
                           loading="lazy"
                         />
-                        <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
+                        <span className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
                       </div>
                     </figure>
                   )

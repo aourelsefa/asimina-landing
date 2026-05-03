@@ -53,8 +53,8 @@ export default function Hero({ title, subtitle, backgroundImage }: HeroProps) {
             quality={95}
             onLoad={() => setIsLoaded(true)}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
+          <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+          <div className="absolute inset-0 z-[2] bg-gradient-to-r from-black/30 to-transparent" />
         </div>
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />

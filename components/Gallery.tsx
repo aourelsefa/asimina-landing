@@ -78,14 +78,13 @@ export default function Gallery({ images }: GalleryProps) {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
                   />
-                  
                   {/* Overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 to-black/0 transition-opacity duration-500 ${
+                  <div className={`absolute inset-0 z-[1] bg-gradient-to-t from-black/80 via-black/0 to-black/0 transition-opacity duration-500 ${
                     hoveredIndex === index ? 'opacity-100' : 'opacity-0'
                   }`} />
                   
                   {/* Image number */}
-                  <div className={`absolute bottom-4 left-4 text-white text-sm font-normal transition-opacity duration-500 ${
+                  <div className={`absolute bottom-4 left-4 z-[2] text-white text-sm font-normal transition-opacity duration-500 ${
                     hoveredIndex === index ? 'opacity-100' : 'opacity-0'
                   }`}>
                     {String(index + 1).padStart(2, '0')}
@@ -115,7 +114,7 @@ export default function Gallery({ images }: GalleryProps) {
             <img
               src={selectedImage.source_url}
               alt={selectedImage.alt_text || t('selectedAlt')}
-              className="max-w-full max-h-[90vh] w-auto h-auto object-contain"
+              className="max-h-[90vh] max-w-full w-auto object-contain"
               onClick={(e) => e.stopPropagation()}
             />
           </div>
