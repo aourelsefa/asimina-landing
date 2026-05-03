@@ -1,16 +1,15 @@
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import './globals.css'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
-import FloatingSocialButton from '@/components/FloatingSocialButton'
-import CookieConsent from '@/components/CookieConsent'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  // Locale-specific metadata is set in `app/[locale]/layout.tsx`.
   title: 'Asimina Habipi Photography',
-  description: 'Photography portfolio by Asimina Habipi - Based in Oslo, focusing on people, places, and atmosphere',
+  description:
+    'Photography portfolio by Asimina Habipi - Based in Oslo, focusing on people, places, and atmosphere',
 }
 
 export default function RootLayout({
@@ -18,14 +17,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const locale = headers().get('x-next-intl-locale') ?? 'en'
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
-        <Navigation />
         {children}
-        <Footer />
-        <FloatingSocialButton />
-        <CookieConsent />
       </body>
     </html>
   )

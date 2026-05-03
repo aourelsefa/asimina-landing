@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import type { WordPressImage } from '@/types/wordpress'
 
 type Props = {
@@ -27,6 +28,7 @@ function ChevronRight({ className }: { className?: string }) {
 }
 
 export function CategoryImageLightbox({ images, index, onIndexChange, onClose }: Props) {
+  const t = useTranslations('lightbox')
   const image = images[index]
   const canPrev = index > 0
   const canNext = index < images.length - 1
@@ -57,11 +59,11 @@ export function CategoryImageLightbox({ images, index, onIndexChange, onClose }:
   if (!image) return null
 
   return (
-    <div className="fixed inset-0 z-[200]" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div className="fixed inset-0 z-[200]" role="dialog" aria-modal="true" aria-label={t('viewerLabel')}>
       <button
         type="button"
         className="absolute inset-0 z-0 bg-black/92 backdrop-blur-sm"
-        aria-label="Close"
+        aria-label={t('close')}
         onClick={onClose}
       />
 
@@ -72,7 +74,7 @@ export function CategoryImageLightbox({ images, index, onIndexChange, onClose }:
         >
           <img
             src={image.source_url}
-            alt=""
+            alt={image.alt_text || t('imageAlt')}
             className="max-h-[min(88vh,1200px)] max-w-[min(100vw-7rem,1400px)] object-contain select-none"
             draggable={false}
           />
@@ -86,7 +88,7 @@ export function CategoryImageLightbox({ images, index, onIndexChange, onClose }:
           onClose()
         }}
         className="pointer-events-auto absolute right-3 top-3 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:right-5 sm:top-5 sm:h-12 sm:w-12"
-        aria-label="Close"
+        aria-label={t('close')}
       >
         <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
           <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
@@ -101,7 +103,7 @@ export function CategoryImageLightbox({ images, index, onIndexChange, onClose }:
             goPrev()
           }}
           className="pointer-events-auto absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:left-4 sm:h-14 sm:w-14"
-          aria-label="Previous image"
+          aria-label={t('previous')}
         >
           <ChevronLeft className="h-7 w-7 sm:h-8 sm:w-8" />
         </button>
@@ -115,7 +117,7 @@ export function CategoryImageLightbox({ images, index, onIndexChange, onClose }:
             goNext()
           }}
           className="pointer-events-auto absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 sm:right-4 sm:h-14 sm:w-14"
-          aria-label="Next image"
+          aria-label={t('next')}
         >
           <ChevronRight className="h-7 w-7 sm:h-8 sm:w-8" />
         </button>

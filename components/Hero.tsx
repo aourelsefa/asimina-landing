@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { WordPressImage } from '@/types/wordpress'
 
 interface HeroProps {
@@ -33,6 +34,7 @@ function heroTitleLines(title: string): string[] {
 export default function Hero({ title, subtitle, backgroundImage }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false)
   const titleLines = heroTitleLines(title)
+  const t = useTranslations('hero')
 
   useEffect(() => {
     setIsLoaded(true)
@@ -44,7 +46,7 @@ export default function Hero({ title, subtitle, backgroundImage }: HeroProps) {
         <div className="absolute inset-0 z-0">
           <Image
             src={backgroundImage.source_url}
-            alt={backgroundImage.alt_text || 'Background'}
+            alt={backgroundImage.alt_text || t('fallbackBackgroundAlt')}
             fill
             className="object-cover scale-105"
             priority
@@ -82,20 +84,20 @@ export default function Hero({ title, subtitle, backgroundImage }: HeroProps) {
             href="/gallery"
             className="inline-flex items-center justify-center min-w-[200px] px-8 py-3.5 bg-white text-gray-900 text-sm font-semibold tracking-wide uppercase transition hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            View Portfolio
+            {t('buttons.viewPortfolio')}
           </Link>
           <Link
             href="/#contact"
             className="inline-flex items-center justify-center min-w-[200px] px-8 py-3.5 border border-white/80 text-white text-sm font-semibold tracking-wide uppercase transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Check Availability
+            {t('buttons.checkAvailability')}
           </Link>
         </div>
       </div>
 
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
         <div className="flex flex-col items-center space-y-2">
-          <span className="text-white/70 text-xs uppercase tracking-wider font-normal">Scroll</span>
+          <span className="text-white/70 text-xs uppercase tracking-wider font-normal">{t('scroll')}</span>
           <div className="animate-bounce">
             <svg
               className="w-5 h-5 text-white/60"

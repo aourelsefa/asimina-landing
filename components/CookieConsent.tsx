@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 const STORAGE_KEY = 'asimina-cookie-consent'
 export type ConsentValue = 'all' | 'essential'
@@ -39,6 +40,7 @@ function writeStored(choice: ConsentValue) {
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false)
+  const t = useTranslations('cookieConsent')
 
   useEffect(() => {
     const existing = readStored()
@@ -81,20 +83,27 @@ export default function CookieConsent() {
       <div className="mx-auto flex max-w-4xl flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-8">
         <div className="min-w-0 flex-1 text-left">
           <p id="cookie-consent-title" className="text-sm font-semibold text-stone-900">
-            Cookies & your privacy
+            {t('title')}
           </p>
           <p className="mt-1.5 text-xs leading-relaxed text-stone-600 md:text-sm">
-            We use optional cookies to improve the site and remember this choice. Essential cookies are always on so the
-            site can function. By clicking &quot;Accept all&quot; you agree to the use of optional cookies as described
-            in our{' '}
-            <Link href="/cookies" className="font-medium text-stone-800 underline decoration-stone-300 underline-offset-2 hover:decoration-stone-800">
-              Cookie policy
-            </Link>{' '}
-            and{' '}
-            <Link href="/privacy" className="font-medium text-stone-800 underline decoration-stone-300 underline-offset-2 hover:decoration-stone-800">
-              Privacy policy
-            </Link>
-            . You can change your mind at any time by clearing site data in your browser.
+            {t.rich('description', {
+              cookiePolicy: (chunks) => (
+                <Link
+                  href="/cookies"
+                  className="font-medium text-stone-800 underline decoration-stone-300 underline-offset-2 hover:decoration-stone-800"
+                >
+                  {chunks}
+                </Link>
+              ),
+              privacyPolicy: (chunks) => (
+                <Link
+                  href="/privacy"
+                  className="font-medium text-stone-800 underline decoration-stone-300 underline-offset-2 hover:decoration-stone-800"
+                >
+                  {chunks}
+                </Link>
+              ),
+            })}
           </p>
         </div>
         <div className="flex shrink-0 flex-col gap-2 sm:flex-row sm:flex-wrap sm:justify-end">
@@ -103,14 +112,14 @@ export default function CookieConsent() {
             onClick={acceptEssentialOnly}
             className="rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-center text-xs font-semibold uppercase tracking-wider text-stone-800 transition hover:border-stone-400 md:min-w-[8.5rem]"
           >
-            Essential only
+            {t('essentialOnly')}
           </button>
           <button
             type="button"
             onClick={acceptAll}
             className="rounded-lg border border-stone-900 bg-stone-900 px-4 py-2.5 text-center text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-stone-800 md:min-w-[8.5rem]"
           >
-            Accept all
+            {t('acceptAll')}
           </button>
         </div>
       </div>

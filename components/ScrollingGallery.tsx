@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { WordPressImage } from '@/types/wordpress'
 
 interface ScrollingGalleryProps {
@@ -12,6 +13,7 @@ interface ScrollingGalleryProps {
 
 export default function ScrollingGallery({ images, variant = 'default' }: ScrollingGalleryProps) {
   const [isHovered, setIsHovered] = useState(false)
+  const t = useTranslations('scrollingGallery')
   
   // Limit to 10 images and duplicate multiple times for seamless infinite loop
   const limitedImages = images.slice(0, 10)
@@ -69,7 +71,7 @@ export default function ScrollingGallery({ images, variant = 'default' }: Scroll
               >
                 <Image
                   src={image.source_url}
-                  alt={image.alt_text || `Gallery image ${index + 1}`}
+                  alt={image.alt_text || t('imageAlt', { index: index + 1 })}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -94,7 +96,7 @@ export default function ScrollingGallery({ images, variant = 'default' }: Scroll
               >
                 <Image
                   src={image.source_url}
-                  alt={image.alt_text || `Gallery image ${index + 1}`}
+                  alt={image.alt_text || t('imageAlt', { index: index + 1 })}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -119,7 +121,7 @@ export default function ScrollingGallery({ images, variant = 'default' }: Scroll
               >
                 <Image
                   src={image.source_url}
-                  alt={image.alt_text || `Gallery image ${index + 1}`}
+                  alt={image.alt_text || t('imageAlt', { index: index + 1 })}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -141,11 +143,11 @@ export default function ScrollingGallery({ images, variant = 'default' }: Scroll
               href="/gallery"
               className="rounded-sm underline-offset-[6px] transition hover:underline hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
-              View Our Album
+              {t('overlay.title')}
             </Link>
           </h3>
           <p className={`${styles.text} text-lg md:text-xl font-medium uppercase tracking-wider opacity-90`}>
-            Explore Our Work
+            {t('overlay.lead')}
           </p>
         </div>
       </div>

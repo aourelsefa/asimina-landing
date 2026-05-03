@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { WordPressImage } from '@/types/wordpress'
 
 interface GalleryProps {
@@ -11,14 +12,15 @@ interface GalleryProps {
 export default function Gallery({ images }: GalleryProps) {
   const [selectedImage, setSelectedImage] = useState<WordPressImage | null>(null)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const t = useTranslations('galleryComponent')
 
   if (!images || images.length === 0) {
     return (
       <section id="gallery" className="py-32 px-4 bg-black text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6">Gallery</h2>
+          <h2 className="text-5xl md:text-7xl font-bold mb-6">{t('title')}</h2>
           <p className="text-gray-400 text-lg">
-            No images available yet. Add images in WordPress to see them here.
+            {t('empty')}
           </p>
         </div>
       </section>
@@ -48,10 +50,10 @@ export default function Gallery({ images }: GalleryProps) {
         <div className="max-w-7xl mx-auto">
           <div className="mb-20 text-center">
             <span className="text-sm text-white/70 uppercase tracking-widest font-medium mb-4 block">
-              Portfolio
+              {t('eyebrow')}
             </span>
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-              Gallery
+              {t('title')}
             </h2>
             <div className="w-24 h-px bg-white/30 mx-auto" />
           </div>
@@ -68,7 +70,7 @@ export default function Gallery({ images }: GalleryProps) {
                 <div className="relative w-full h-full">
                   <Image
                     src={image.source_url}
-                    alt={image.alt_text || `Gallery image ${image.id}`}
+                    alt={image.alt_text || t('imageAlt', { index: image.id })}
                     fill
                     className={`object-cover transition-all duration-700 ${
                       hoveredIndex === index ? 'scale-110 brightness-110' : 'scale-100'
@@ -104,7 +106,7 @@ export default function Gallery({ images }: GalleryProps) {
           <button
             className="absolute top-6 right-6 text-white text-5xl hover:text-gray-300 transition-colors z-[101] font-light w-12 h-12 flex items-center justify-center bg-black/50 rounded-full"
             onClick={handleCloseModal}
-            aria-label="Close"
+            aria-label={t('close')}
           >
             ×
           </button>
@@ -112,7 +114,7 @@ export default function Gallery({ images }: GalleryProps) {
           <div className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center">
             <img
               src={selectedImage.source_url}
-              alt={selectedImage.alt_text || 'Selected image'}
+              alt={selectedImage.alt_text || t('selectedAlt')}
               className="max-w-full max-h-[90vh] w-auto h-auto object-contain"
               onClick={(e) => e.stopPropagation()}
             />
@@ -120,7 +122,7 @@ export default function Gallery({ images }: GalleryProps) {
           
           {/* Navigation hint */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 text-sm pointer-events-none">
-            Click outside to close
+            {t('clickOutside')}
           </div>
         </div>
       )}

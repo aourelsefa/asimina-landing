@@ -1,5 +1,7 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 export type ContactRingsLayoutProps = {
   title: string
   lead: string
@@ -49,6 +51,7 @@ export default function ContactRingsLayout({
   address,
   sectionId = 'contact',
 }: ContactRingsLayoutProps) {
+  const t = useTranslations('contactRings')
   return (
     <section
       id={sectionId || undefined}
@@ -92,7 +95,7 @@ export default function ContactRingsLayout({
           </p>
         )}
         <p className="mt-8 text-center text-xs text-neutral-500 md:mt-10">
-          I read every message myself — usually within a day or two.
+          {t('responseTime')}
         </p>
       </div>
     </section>

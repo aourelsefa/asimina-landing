@@ -1,4 +1,7 @@
-import Link from 'next/link'
+'use client'
+
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import type { ReactNode } from 'react'
 
 type LegalPageShellProps = {
@@ -9,6 +12,7 @@ type LegalPageShellProps = {
 }
 
 export function LegalPageShell({ eyebrow, title, children, updatedLabel }: LegalPageShellProps) {
+  const t = useTranslations('legal.shell')
   return (
     <main className="min-h-screen bg-[#f0efec] text-stone-900">
       {/* pt matches fixed nav height on inner pages — see gallery header */}
@@ -26,7 +30,7 @@ export function LegalPageShell({ eyebrow, title, children, updatedLabel }: Legal
       </div>
       <div className="border-t border-stone-200/60 bg-[#f0efec] px-4 py-8 text-center">
         <Link href="/" className="text-sm font-medium text-stone-800 underline decoration-stone-300 underline-offset-2 hover:decoration-stone-800">
-          ← Back to home
+          ← {t('backToHome')}
         </Link>
       </div>
     </main>

@@ -1,0 +1,261 @@
+{
+  "site": {
+    "title": "Asimina Habipi Photography",
+    "description": "Fotografiportefølje av Asimina Habipi – basert i Oslo, med fokus på mennesker, steder og stemning"
+  },
+  "language": {
+    "en": "English",
+    "nb": "Norsk"
+  },
+  "common": {
+    "numberLabel": "Nr."
+  },
+  "navigation": {
+    "items": {
+      "about": "Om",
+      "categories": "Kategorier",
+      "gallery": "Galleri",
+      "blog": "Blogg",
+      "contact": "Kontakt"
+    },
+    "mobile": {
+      "toggleMenu": "Åpne/lukk meny",
+      "reachOut": "Ta kontakt"
+    }
+  },
+  "hero": {
+    "buttons": {
+      "viewPortfolio": "Se portefølje",
+      "checkAvailability": "Sjekk tilgjengelighet"
+    },
+    "scroll": "Scroll",
+    "fallbackBackgroundAlt": "Bakgrunn"
+  },
+  "home": {
+    "gallerySection": {
+      "eyebrow": "Portefølje",
+      "title": "Galleri"
+    }
+  },
+  "categories": {
+    "eyebrow": "Tjenester",
+    "title": "Fototjenester",
+    "description": "Jeg tilbyr profesjonelle fototjenester i Oslo for bryllup, par og familie, dåp, mote og portretter, arrangementer og reklame. Du får nøye redigerte bilder av høy kvalitet som forteller historien din på en tidløs og autentisk måte.",
+    "approachLabel": "Tilnærming",
+    "portfolioLabel": "Portefølje",
+    "selectedWorkTitle": "Utvalgte bilder",
+    "selectedWorkLead": "{name}-fotografering — Oslo og ellers. Klikk på et bilde for å se større.",
+    "imagesComingSoon": "Bilder for denne seksjonen kommer snart.",
+    "cta": {
+      "title": "Planlegger du noe i Oslo?",
+      "lead": "Fortell meg om din {name} — datoer, sted og hva som er viktigst for deg.",
+      "getInTouch": "Ta kontakt",
+      "allServices": "Alle tjenester"
+    },
+    "card": {
+      "viewMobile": "Se",
+      "viewDesktop": "Se galleri",
+      "imageAlt": "{name}-fotografering"
+    },
+    "items": {
+      "wedding": {
+        "name": "Bryllup",
+        "pageTitle": "Bryllup i Oslo",
+        "shortDescription": "Fanger den store dagen med autentisitet og følelser",
+        "fullDescriptionHtml": "<p>Bryllupsfotografering handler om mer enn å dokumentere en hendelse – det handler om å bevare de ekte følelsene, de stille øyeblikkene og stemningen som gjør dagen deres unik.</p>\n<p>Jeg fotograferer med tålmodighet og observasjon, lar øyeblikkene skje naturlig i stedet for å presse frem posering. Målet mitt er å fange ekte forbindelser, små blikk, latter og gledestårer som forteller historien deres.</p>\n<p>Fra intime forberedelser om morgenen til feiringen etterpå, fokuserer jeg på bilder som føles autentiske og meningsfulle. Hvert bryllup er forskjellig, og jeg jobber for å forstå hva som gjør deres dag spesiell – slik at bildene gjenspeiler personlighetene deres og stemningen.</p>\n<p>Enten det er en liten, intim vielse eller en stor feiring, tror jeg de beste bildene kommer når folk føler seg trygge og kan være seg selv. La meg hjelpe dere å bevare minnene på en måte som føles ekte.</p>"
+      },
+      "couples-family": {
+        "name": "Par og familie",
+        "pageTitle": "Par og familie i Oslo",
+        "shortDescription": "Kjærlighet, familiebånd og nærhet i bilder",
+        "fullDescriptionHtml": "<p>Par- og familiefotografering handler om kjemi mellom mennesker – små bevegelser, latter og varme som gjør relasjonene deres synlige i bildet.</p>\n<p>Jeg holder øktene avslappet slik at barn kan leke, par kan puste ut, og besteforeldre kan bli med uten å føle seg «på audition». Målet er ekte samspill heller enn stiv posering, med mild veiledning når det trengs.</p>\n<p>Fra graviditet og nyfødt til jubileer og samlinger på tvers av generasjoner, tilpasser jeg meg tempoet deres. Vi kan fotografere hjemme, ute eller et sted som betyr noe for dere.</p>\n<p>Bildene som varer er ofte de uskjriptede – et delt blikk, en hånd på skulderen, alle i én sofa. Jeg leter etter slike øyeblikk og former lys rundt dem så dere kan leve dem på nytt.</p>"
+      },
+      "baptism": {
+        "name": "Dåp",
+        "pageTitle": "Dåp i Oslo",
+        "shortDescription": "Dokumenterer meningsfulle øyeblikk av tro og feiring",
+        "fullDescriptionHtml": "<p>Dåpsseremonier er sterke øyeblikk av tro, familie og tradisjon. Disse feiringene markerer viktige milepæler i en families åndelige reise, og fortjener å bli dokumentert med omtanke og respekt.</p>\n<p>Jeg fotograferer dåp med en rolig tilstedeværelse, og forstår at dette er hellige øyeblikk som krever ærbødighet. Jeg fokuserer på stemningen i seremonien, ansiktsuttrykkene til familien og detaljene som gjør hver dåp unik.</p>\n<p>Fra den formelle seremonien til familiesamlingen etterpå, dokumenterer jeg dagen på en måte som hedrer betydningen – samtidig som jeg bevarer ekte følelser og nærhet mellom mennesker.</p>\n<p>Bildene blir verdifulle familie-minner som fanger mer enn en hendelse: et øyeblikk av tro, håp og feiring som dere kan se tilbake på i generasjoner.</p>"
+      },
+      "fashion-portraits": {
+        "name": "Mote – portretter",
+        "pageTitle": "Mote og portretter i Oslo",
+        "shortDescription": "Redaksjonell mote og ekte portretter – plagg, uttrykk og personlighet",
+        "fullDescriptionHtml": "<p>Her møtes motefotografering og portretter: redaksjonelt uttrykk, stoff og bevegelse på den ene siden, og nærhet og personlighet på den andre – ofte i samme prosjekt.</p>\n<p>Til mote og lookbook avstemmer vi stemning, referanser og tempo; jeg bruker naturlig og styrt lys og bevisst komposisjon slik at snitt, tekstur og silhuett leses tydelig.</p>\n<p>Til portretter – private eller profesjonelle – skaper jeg ro rundt deg slik at du kan slappe av og vise deg selv, uten stiv posering.</p>\n<p>Trenger dere portefølje, kampanjebilder, headshots eller en miks av stil og naturlighet, tilpasser vi dagen til målet deres – med filer som fungerer på nett, trykk og sosiale medier.</p>"
+      },
+      "events": {
+        "name": "Arrangementer",
+        "pageTitle": "Arrangementer i Oslo",
+        "shortDescription": "Bedrifts- og eventfotografering",
+        "fullDescriptionHtml": "<p>Eventfotografering krever evnen til å være til stede og observant, og å fange stemningen og energien i både store og små samlinger. Fra bedriftsarrangementer til sosiale feiringer – hver event har sin egen karakter og øyeblikk som er verdt å bevare.</p>\n<p>Jeg fotograferer dokumentarisk og lar arrangementet flyte naturlig, uten å avbryte. Målet er å dokumentere atmosfæren, samspillet mellom mennesker og detaljene som gjør eventet minneverdig.</p>\n<p>Enten det er konferanse, lansering, bursdag eller kulturell markering, jobber jeg for å forstå formålet og stemningen – slik at bildene gjenspeiler det som gjorde dagen spesiell.</p>\n<p>God eventfotografering handler om å være på rett sted til rett tid, se det som betyr noe, og lage bilder som forteller historien på en autentisk og engasjerende måte.</p>"
+      },
+      "advertisment": {
+        "name": "Reklame",
+        "pageTitle": "Reklame og næringsliv i Oslo",
+        "shortDescription": "Produkt, mat og merkevare for kampanjer og trykk",
+        "fullDescriptionHtml": "<p>Reklamefotografering gjør det dere selger eller står for om til bilder som stanser scrolling og som også fungerer i trykk. Klarhet, farge og komposisjon tjener budskapet.</p>\n<p>Jeg planlegger hvert bilde ut fra briefet – rekvisitter, flater og lys som passer merkestemmen. Mat, produkt, livsstil og detaljer kan bygges i et gjennomgående uttrykk slik at kampanjen føles helhetlig.</p>\n<p>Trenger dere bilder til meny, nettbutikk, brosjyre eller sosiale annonser, avklarer vi leveranser og formater på forhånd slik at filene er klare for designere og markedsførere.</p>\n<p>God næringsfotografering er både presis og innbydende: riktig for tilbudet, fortsatt med menneskelig temperatur. Jeg sikter mot bilder som jobber for virksomheten deres og passer inn i merkevaren.</p>"
+      }
+    }
+  },
+  "galleryPage": {
+    "metadata": {
+      "title": "Galleri",
+      "description": "Utvalgte bilder – bryllup, par og familie, dåp, mote og portretter, arrangementer og reklame i Oslo og ellers."
+    },
+    "header": {
+      "eyebrow": "Portefølje",
+      "title": "Øyeblikk i ingen bestemt rekkefølge",
+      "lead": "En levende vegg av rammer – laget for å vokse. Se gjennom kategoriene på forsiden for historier; dette er den rå rytmen i arbeidet.",
+      "enquire": "Send forespørsel"
+    },
+    "framesCount": "{count} bilder",
+    "homeLink": "← Hjem",
+    "fallbackAlt": "Galleri-bilde",
+    "fallbackCaption": "Bilde",
+    "ariaLabel": "Bildegalleri"
+  },
+  "blog": {
+    "section": {
+      "eyebrow": "Blogg",
+      "title": "Notater om fotografi",
+      "description": "Praktiske ideer for bryllup, familiebegivenheter og portretter i Oslo og Norge – skrevet for par og familier som planlegger en fotografering.",
+      "readArticle": "Les artikkel",
+      "minRead": "{minutes} min lesetid"
+    },
+    "post": {
+      "journal": "Journal",
+      "backToBlog": "← Tilbake til bloggen",
+      "category": "Fotografi",
+      "planningTitle": "Planlegger du en fotografering i Oslo?",
+      "planningLead": "Del dato, sted og hva du ønsker at bildene skal føles som – så svarer jeg så snart jeg kan.",
+      "getInTouch": "Ta kontakt",
+      "moreArticles": "Flere artikler"
+    },
+    "posts": {
+      "natural-light-wedding-photography-oslo": {
+        "title": "Naturlig lys i bryllupsfotografering i Oslo: Hva du bør planlegge",
+        "metaDescription": "Praktiske tips for bryllupsfotografering i Oslo med naturlig lys: sesonger, steder, tidslinje og hvordan du samarbeider med fotografen for tidløse bilder.",
+        "keywords": "bryllupsfotograf Oslo|naturlig lys bryllup|bryllupsfotograf Norge|utendørs bryllup Oslo",
+        "coverAlt": "Bryllupsfotografering i Oslo med naturlig lys",
+        "excerpt": "Hvordan dagslys, sesong og valg av sted påvirker bryllupsbildene i Oslo – og hva du bør snakke med fotografen om før dagen.",
+        "bodyHtml": "<p>Mange par i Oslo ønsker bryllupsbilder som føles <strong>ærlige og uanstrengte</strong>. Naturlig lys er ofte den enkleste veien dit – men det fungerer best når tidslinje og lokasjoner matcher hvordan solen faktisk oppfører seg i Norge.</p>\n<h2>Lyset i Oslo endrer seg med sesongen</h2>\n<p>Vinterbryllup betyr kortere dager og mykt, lavt lys store deler av ettermiddagen. Sommeren gir lange kvelder – perfekt for portretter etter middag uten å miste den varme, gyldne kvaliteten. Hvis du booker fotograf, del <strong>seremonitid og adresse</strong> tidlig, slik at det kan planlegges hvor dere står under vielsen, gruppebilder og portretter.</p>\n<h2>Steder: vinduer, hager og åpen skygge</h2>\n<p>Historiske bygg, hoteller og kyststeder rundt Oslo oppfører seg ulikt. Store vinduer kan gi nydelig retningslys på overskyede dager. Utendørs fungerer ofte best i <strong>åpen skygge</strong> (ikke dyp skogskygge, som kan gjøre hudtoner kalde). Fotografen kan speide eller foreslå timing, så dere ikke kjemper mot hardt midt-på-dagen-lys.</p>\n<h2>Hva du bør spørre om i en samtale</h2>\n<p>Spør hvordan de håndterer lite lys innendørs, om de bruker blits på en smakfull måte når det trengs, og hvordan de <strong>bevarer stemningen</strong> samtidig som de leverer skarpe, brukbare filer. Målet er en balanse mellom atmosfære og pålitelighet.</p>"
+      },
+      "baptism-family-photographer-norway": {
+        "title": "Dåp og familiebegivenheter: Slik finner du riktig fotograf i Norge",
+        "metaDescription": "Hva du bør se etter hos en fotograf til dåp eller familiebegivenhet i Norge: diskresjon, erfaring i kirker og bilder som føles rolige og personlige.",
+        "keywords": "dåpsfotograf Norge|fotograf familiebegivenhet Oslo|kirke fotografering Norge|barnedåp fotograf",
+        "coverAlt": "Dåps- og familiefotografering i Norge",
+        "excerpt": "Dåp og små familiesamlinger trenger en fotograf som beveger seg stille, respekterer rommet og fanger ekte nærhet.",
+        "bodyHtml": "<p>Dåp, konfirmasjoner og intime familiesammenkomster er <strong>korte og følelsesladde</strong>. De beste bildene kommer sjelden av høylytt regi – de kommer fra en som leser rommet og holder seg litt i bakgrunnen til riktig øyeblikk.</p>\n<h2>Kirker, kapeller og private lokaler</h2>\n<p>Regler varierer: noen steder tillater bevegelse bare i bestemte områder, eller begrenser blits. En fotograf som har jobbet i <strong>lignende rom i Norge</strong> setter forventninger på forhånd. Hvis seremonien følger en tradisjon som er ny for fotografen, hjelper en kort briefing for å forutse nøkkeløyeblikk.</p>\n<h2>Gruppebilder uten å miste dagen</h2>\n<p>Det hjelper å utpeke ett familiemedlem som kan samle folk til en kort liste med viktige gruppebilder. Resten av tiden kan være mer fri – <strong>ekte kontakt</strong> mellom foreldre, faddere og barn eldes ofte bedre enn lange poseringer i en gang.</p>\n<h2>Hva du får etterpå</h2>\n<p>Spør om leveringstid, hvordan filene deles, og om du kan bestille album gjennom fotografen. Klare, skriftlige svar sparer stress etter en travel helg.</p>"
+      },
+      "authentic-portrait-photography-oslo": {
+        "title": "Autentiske portretter i Oslo: Avslappet posering som fortsatt ser gjennomtenkt ut",
+        "metaDescription": "Hvordan portrettfotografer i Oslo hjelper deg å se naturlig ut på kamera: bevegelse, ekte miljøer og hvorfor «ikke å posere» fortsatt er en ferdighet.",
+        "keywords": "portrettfotograf Oslo|autentiske portretter Norge|livsstilsfotografering Oslo|headshots Oslo",
+        "coverAlt": "Utendørs portrett med naturlig, avslappet posering i Oslo",
+        "excerpt": "Hvorfor de beste portrettøktene føles mer som en tur og en samtale enn en studio-opptreden – og hvordan du forbereder deg uten å overtenke.",
+        "bodyHtml": "<p>Mange sier at de er «kleine foran kamera». I praksis er problemet ofte ikke deg – det er <strong>tomt rom og ingen kontekst</strong>. En god portrettfotografering i Oslo bør gi deg noe å gjøre, et sted å være, og akkurat nok struktur til at bildene føles bevisste – ikke tilfeldige.</p>\n<h2>Miljø fremfor bakgrunn</h2>\n<p>Nabolag, studioer med karakter og steder du faktisk liker vil merkes i kroppsspråket ditt. En park du går i, en kafé du bruker, eller en rolig gate nær hjemmet kan slå en generisk bakgrunn fordi <strong>oppmerksomheten flyttes utover</strong> i stedet for inn i bekymring for linsen.</p>\n<h2>Regi uten stivhet</h2>\n<p>«Ikke å posere» betyr ofte: små prompts, gjentatt noen ganger – gå, stå stille, se ut, se tilbake, juster jakken, le av noe ekte. En fotograf er der for å <strong>komprimere tid</strong> slik at de gode øyeblikkene skjer på tjue minutter, ikke to timer med ubehag.</p>\n<h2>Før fotograferingen</h2>\n<p>Søvn og væske betyr mer enn et nytt antrekk. Hvis du velger mellom to antrekk, ta det du kan bevege deg i og som passer sesongen – Oslo-været er en del av historien, ikke en feil i bakgrunnen.</p>"
+      }
+    }
+  },
+  "legal": {
+    "shell": {
+      "updatedLabel": "Sist oppdatert: {date}",
+      "eyebrow": "Juridisk",
+      "backToHome": "Tilbake til forsiden"
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Personvernerklæring",
+        "description": "Hvordan Asimina Habipi Photography behandler personopplysninger i tråd med GDPR, inkludert dine rettigheter og hvordan du kan kontakte oss."
+      },
+      "title": "Personvernerklæring",
+      "lastUpdated": "16. januar 2026",
+      "bodyHtml": "<p>Denne erklæringen forklarer hvordan <strong>Asimina Habipi Photography</strong> (\"vi\") behandler personopplysninger når du bruker nettsiden, sender en forespørsel eller samarbeider med oss som kunde. Den er skrevet med <strong>GDPR</strong> og i Norge <strong>personopplysningsloven</strong> i mente. Den er ment som informasjon og erstatter ikke juridisk rådgivning.</p>\n<h2>1. Behandlingsansvarlig</h2>\n<p>Behandlingsansvarlig er Asimina Habipi Photography, basert i Oslo, Norge. For spørsmål om personvern kan du kontakte oss på {emailLink}.</p>\n<h2>2. Hvilke data vi kan samle inn</h2>\n<ul>\n<li><strong>Kontakt- og forespørselsdata:</strong> for eksempel navn, e-postadresse, telefonnummer, dato, sted og innholdet i meldingen din.</li>\n<li><strong>Kontrakt- og prosjektdata:</strong> informasjon som trengs for å levere fototjenester, som sted, ønskelister eller annen informasjon du velger å dele.</li>\n<li><strong>Bruksdata:</strong> grunnleggende tekniske data kan behandles av hosting/infrastruktur (for eksempel logger, IP-adresse i sikkerhetssammenheng, nettlesertype) i tråd med leverandørens dokumentasjon.</li>\n<li><strong>Informasjonskapsler og preferanser:</strong> slik beskrevet i vår policy for informasjonskapsler.</li>\n</ul>\n<h2>3. Hvorfor vi bruker data (rettslig grunnlag)</h2>\n<p>Vi behandler personopplysninger på ett eller flere av følgende grunnlag:</p>\n<ul>\n<li><strong>Avtale:</strong> for å ta skritt på din forespørsel før avtale, eller for å oppfylle fotoavtalen.</li>\n<li><strong>Berettiget interesse:</strong> for å svare på henvendelser, drive virksomheten, forbedre nettsiden og sikre IT og regnskap, der dette ikke overstyres av dine rettigheter.</li>\n<li><strong>Samtykke:</strong> der du har gitt tydelig samtykke (for eksempel for valgfrie informasjonskapsler).</li>\n<li><strong>Rettslig forpliktelse:</strong> der loven krever lagring eller utlevering.</li>\n</ul>\n<h2>4. Lagringstid</h2>\n<p>Vi lagrer kontakt- og prosjektdata så lenge det er nødvendig for å levere tjenester, håndtere kundeforhold og oppfylle lovpålagte krav. Logger og tekniske data lagres vanligvis kort tid, avhengig av hosting-oppsett.</p>\n<h2>5. Hvem vi deler data med</h2>\n<p>Vi selger ikke personopplysninger. Vi kan dele med:</p>\n<ul>\n<li>IT- og hosting-leverandører som gjør nettsiden og e-post/lagring mulig;</li>\n<li>profesjonelle rådgivere ved behov (for eksempel regnskapsfører);</li>\n<li>offentlige myndigheter når det kreves ved lov.</li>\n</ul>\n<p>Når vi bruker databehandlere, krever vi at de beskytter data på en passende måte.</p>\n<h2>6. Overføringer til utlandet</h2>\n<p>Hvis leverandører behandler data utenfor EØS, bruker vi egnede garantier (for eksempel standard kontraktsklausuler) der det er påkrevd.</p>\n<h2>7. Dine rettigheter</h2>\n<p>Avhengig av situasjonen kan du ha rett til å:</p>\n<ul>\n<li>be om innsyn;</li>\n<li>be om retting;</li>\n<li>be om sletting, begrensning eller protestere mot behandling;</li>\n<li>trekke tilbake samtykke;</li>\n<li>klage til tilsynsmyndighet.</li>\n</ul>\n<p>I Norge er tilsynsmyndigheten Datatilsynet.</p>\n<p>For å utøve rettighetene dine kan du kontakte oss på {emailLink}. Vi kan måtte bekrefte identiteten din før vi svarer.</p>\n<h2>8. Sikkerhet</h2>\n<p>Vi bruker rimelige tekniske og organisatoriske tiltak for å beskytte personopplysninger mot tap og misbruk.</p>\n<h2>9. Endringer</h2>\n<p>Vi kan oppdatere denne siden fra tid til annen. Datoen «Sist oppdatert» øverst vil endres når vi gjør det.</p>"
+    },
+    "cookies": {
+      "metadata": {
+        "title": "Informasjonskapsler",
+        "description": "Hvilke informasjonskapsler og lignende teknologier Asimina Habipi Photography bruker, og hvordan du kan styre valgene dine."
+      },
+      "title": "Informasjonskapsler",
+      "lastUpdated": "16. januar 2026",
+      "bodyHtml": "<p>Denne policyen forklarer hvordan <strong>Asimina Habipi Photography</strong> bruker informasjonskapsler og lignende teknologier på denne nettsiden, og hvordan du kan styre valgene dine. Den bør leses sammen med vår personvernerklæring.</p>\n<h2>1. Hva er informasjonskapsler og lignende teknologier?</h2>\n<p>En <strong>informasjonskapsel</strong> er en liten tekstfil som lagres på enheten din av en nettside. Vi bruker også <strong>lignende teknologier</strong> som <strong>local storage</strong> i nettleseren for å huske preferanser (for eksempel ditt valg om informasjonskapsler) uten nødvendigvis å sende en klassisk HTTP-cookie til serverne våre.</p>\n<h2>2. Hvordan vi ber om samtykke</h2>\n<p>Ved første besøk vil du se en banner med <strong>Godta alle</strong> og <strong>Bare nødvendige</strong>. Valget ditt lagres i nettleseren (som beskrevet nedenfor) slik at vi ikke viser samme banner på hvert besøk. Du kan endre mening når som helst ved å slette nettstedsdata for domenet, og banneret vil vises igjen.</p>\n<h2>3. Hva vi bruker i praksis</h2>\n<h3>Strengt nødvendig</h3>\n<p>Dette trengs for at nettsiden skal fungere eller for å oppfylle din eksplisitte forespørsel:</p>\n<ul>\n<li>Grunnleggende levering av sider og sikkerhet (som leveres av hosting eller rammeverk).</li>\n<li>En registrering av ditt <strong>valg</strong> i <strong>local storage</strong> (for eksempel nøkkel <code>asimina-cookie-consent</code>) slik at banneret ikke vises gjentatte ganger.</li>\n</ul>\n<h3>Valgfritt (kun hvis du klikker «Godta alle»)</h3>\n<p>Hvis du velger <strong>Godta alle</strong>, samtykker du til at vi kan bruke valgfrie, ikke-nødvendige funksjoner vi legger til i fremtiden for å forbedre nettsiden (for eksempel analyse i aggregert form). <strong>Inntil slike verktøy faktisk er aktivert, gjelder kun nødvendig lagring.</strong> Policyen oppdateres dersom vi legger til konkrete informasjonskapsler eller tredjepartstjenester.</p>\n<p>Hvis du velger <strong>Bare nødvendige</strong>, bruker vi ikke det valgfrie laget. Vi beholder kun det som er nødvendig, inkludert registreringen av valget ditt.</p>\n<h2>4. Tredjepartstjenester</h2>\n<p>Nettsiden er laget for å minimere tredjepartssporing. Hvis vi bygger inn innhold eller verktøy fra andre (for eksempel video eller kart), kan deres informasjonskapsler gjelde – vi oppdaterer denne siden når det er relevant.</p>\n<h2>5. Administrere informasjonskapsler i nettleseren</h2>\n<p>Du kan blokkere eller slette informasjonskapsler og local storage via nettleserinnstillingene. Merk at fjerning av lagrede data kan logge deg ut av andre sider eller nullstille samtykket ditt, slik at banneret vises igjen.</p>\n<h2>6. Rettigheter og kontakt</h2>\n<p>For mer om hvordan vi behandler personopplysninger, se personvernerklæringen. Spørsmål: kontakt oss på {emailLink}.</p>"
+    }
+  },
+  "footer": {
+    "tagline": "Fotograf basert i Oslo – bryllup, par og familie, dåp, mote og portretter, arrangementer og reklame.",
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn"
+    },
+    "quickLinks": {
+      "title": "Hurtiglenker"
+    },
+    "categories": {
+      "title": "Kategorier"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "location": "Oslo, Norge",
+      "sendMessage": "Send en melding"
+    },
+    "copyright": "© {year} Asimina Habipi Photography",
+    "rightsReserved": "Alle rettigheter forbeholdt",
+    "privacyPolicy": "Personvernerklæring",
+    "cookiePolicy": "Informasjonskapsler",
+    "developedWith": "Utviklet med <heart>♥</heart> av <agency>SEFAWEB</agency>"
+  },
+  "contact": {
+    "title": "Ta kontakt",
+    "lead": "Har du et prosjekt i tankene? Jeg vil gjerne høre fra deg – del datoer, sted og hva du ønsker at bildene skal føles som."
+  },
+  "about": {
+    "title": "Om meg",
+    "descriptionHtml": "<p>Jeg er en fotograf basert i Oslo, med fokus på å fange mennesker, steder og stemning slik de naturlig er.</p>\n<p>Arbeidet mitt utforsker følelser, identitet og den subtile forbindelsen mellom mennesker og omgivelsene deres. Jeg fotograferer med tålmodighet, observerer heller enn å avbryte, og lar øyeblikkene utvikle seg av seg selv.</p>\n<p>Jeg er ikke ute etter tvungne poseringer eller kunstig perfeksjon. Det som tiltrekker meg er ekte uttrykk, stille detaljer og atmosfæren som ofte går ubemerket.</p>\n<p>Enten jeg fotograferer mennesker, arrangementer eller rom, er målet mitt enkelt: å skape bilder som føles ærlige, personlige og levende. De sterkeste fotografiene skjer når folk føler seg trygge – når de ikke opptrer, men bare er.</p>",
+    "imageAlt": "Asimina Habipi – fotograf",
+    "profileAltFallback": "Profil"
+  },
+  "heroContent": {
+    "title": "Fotograf i Oslo\nfor Bryllup, Par og familie,\nDåp, Mote — portretter, Arrangementer & Reklame",
+    "subtitleHtml": "Fanger ekte øyeblikk med en tidløs, filmatisk stil",
+    "imageAlt": "Asimina Habipi – fotograf i Oslo"
+  },
+  "cookieConsent": {
+    "title": "Informasjonskapsler og personvern",
+    "description": "Vi bruker valgfrie informasjonskapsler for å forbedre nettsiden og huske dette valget. Nødvendige informasjonskapsler er alltid på slik at nettsiden fungerer. Ved å klikke «Godta alle» samtykker du til bruk av valgfrie informasjonskapsler som beskrevet i vår <cookiePolicy>policy for informasjonskapsler</cookiePolicy> og <privacyPolicy>personvernerklæring</privacyPolicy>. Du kan endre mening når som helst ved å slette nettstedsdata i nettleseren.",
+    "essentialOnly": "Bare nødvendige",
+    "acceptAll": "Godta alle"
+  },
+  "floatingSocial": {
+    "openMenu": "Åpne sosial meny",
+    "closeMenu": "Lukk sosial meny"
+  },
+  "scrollingGallery": {
+    "imageAlt": "Galleri-bilde {index}",
+    "overlay": {
+      "title": "Se albumet",
+      "lead": "Utforsk arbeidet mitt"
+    }
+  },
+  "lightbox": {
+    "viewerLabel": "Bildeviser",
+    "close": "Lukk",
+    "previous": "Forrige bilde",
+    "next": "Neste bilde",
+    "imageAlt": "Valgt bilde"
+  },
+  "contactRings": {
+    "responseTime": "Jeg leser hver melding selv – vanligvis innen en dag eller to."
+  },
+  "galleryComponent": {
+    "eyebrow": "Portefølje",
+    "title": "Galleri",
+    "empty": "Ingen bilder tilgjengelig ennå. Legg til bilder i WordPress for å se dem her.",
+    "imageAlt": "Galleri-bilde {index}",
+    "close": "Lukk",
+    "selectedAlt": "Valgt bilde",
+    "clickOutside": "Klikk utenfor for å lukke"
+  }
+}
+

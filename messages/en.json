@@ -1,0 +1,261 @@
+{
+  "site": {
+    "title": "Asimina Habipi Photography",
+    "description": "Photography portfolio by Asimina Habipi - Based in Oslo, focusing on people, places, and atmosphere"
+  },
+  "language": {
+    "en": "English",
+    "nb": "Norsk"
+  },
+  "common": {
+    "numberLabel": "No."
+  },
+  "navigation": {
+    "items": {
+      "about": "About",
+      "categories": "Categories",
+      "gallery": "Gallery",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "mobile": {
+      "toggleMenu": "Toggle menu",
+      "reachOut": "Reach out"
+    }
+  },
+  "hero": {
+    "buttons": {
+      "viewPortfolio": "View Portfolio",
+      "checkAvailability": "Check Availability"
+    },
+    "scroll": "Scroll",
+    "fallbackBackgroundAlt": "Background"
+  },
+  "home": {
+    "gallerySection": {
+      "eyebrow": "Portfolio",
+      "title": "Gallery"
+    }
+  },
+  "categories": {
+    "eyebrow": "Services",
+    "title": "Photography services",
+    "description": "I provide professional photography services in Oslo for weddings, couples and families, baptisms, fashion and portraits, events, and advertising. You'll receive carefully edited, high-quality photos that tell your story in a timeless and authentic way.",
+    "approachLabel": "Approach",
+    "portfolioLabel": "Portfolio",
+    "selectedWorkTitle": "Selected work",
+    "selectedWorkLead": "{name} photography — Oslo and beyond. Click an image to view larger.",
+    "imagesComingSoon": "Images for this section are coming soon.",
+    "cta": {
+      "title": "Planning something in Oslo?",
+      "lead": "Tell me about your {name} — dates, venue, and what matters most to you.",
+      "getInTouch": "Get in touch",
+      "allServices": "All services"
+    },
+    "card": {
+      "viewMobile": "View",
+      "viewDesktop": "View gallery",
+      "imageAlt": "{name} photography"
+    },
+    "items": {
+      "wedding": {
+        "name": "Weddings",
+        "pageTitle": "Weddings in Oslo",
+        "shortDescription": "Capturing your special day with authenticity and emotion",
+        "fullDescriptionHtml": "<p>Wedding photography is about more than documenting an event—it's about preserving the genuine emotions, the quiet moments, and the atmosphere that makes your day uniquely yours.</p>\n<p>I approach wedding photography with patience and observation, allowing moments to unfold naturally rather than forcing poses. My goal is to capture the real connections between people, the subtle glances, the laughter, and the tears of joy that tell your story.</p>\n<p>From the intimate preparations in the morning to the celebration that follows, I focus on creating images that feel authentic and meaningful. Every wedding is different, and I work to understand what makes yours special, ensuring the photographs reflect your personalities and the atmosphere of your day.</p>\n<p>Whether it's a small intimate ceremony or a grand celebration, I believe the best images come from moments when people feel comfortable and can be themselves. Let me help you preserve these memories in a way that feels true to who you are.</p>"
+      },
+      "couples-family": {
+        "name": "Couples & Family",
+        "pageTitle": "Couples & family in Oslo",
+        "shortDescription": "Love stories, family ties, and togetherness in pictures",
+        "fullDescriptionHtml": "<p>Couples and family photography is about the chemistry between people—the small gestures, laughter, and warmth that make your relationships visible in an image.</p>\n<p>I keep sessions relaxed so children can play, couples can breathe, and grandparents can step in without feeling staged. My aim is honest interaction rather than stiff posing, while still giving gentle direction when it helps.</p>\n<p>From maternity and newborns to anniversaries and multi-generation gatherings, I adapt to your rhythm. We can shoot at home, outdoors, or somewhere that matters to you so the setting feels like part of the story.</p>\n<p>The pictures that last are often the unscripted ones: a shared glance, a hand on a shoulder, everyone squeezed on one sofa. I look for those moments and shape light around them so you can relive them for years.</p>"
+      },
+      "baptism": {
+        "name": "Baptism",
+        "pageTitle": "Baptism in Oslo",
+        "shortDescription": "Documenting meaningful moments of faith and celebration",
+        "fullDescriptionHtml": "<p>Baptism ceremonies are profound moments of faith, family, and tradition. These celebrations mark important milestones in a family's spiritual journey, and they deserve to be documented with sensitivity and respect.</p>\n<p>I approach baptism photography with a quiet presence, understanding that these are sacred moments that require reverence. My focus is on capturing the atmosphere of the ceremony, the expressions of family members, and the meaningful details that make each baptism unique.</p>\n<p>From the formal ceremony to the family gatherings that follow, I document these moments in a way that honors the significance of the occasion while preserving the genuine emotions and connections between family members.</p>\n<p>These photographs become treasured family heirlooms, capturing not just an event, but a moment of faith, hope, and celebration that families will look back on for generations.</p>"
+      },
+      "fashion-portraits": {
+        "name": "Fashion - Portraits",
+        "pageTitle": "Fashion & portraits in Oslo",
+        "shortDescription": "Editorial fashion and authentic portraits — wardrobe, expression, and character",
+        "fullDescriptionHtml": "<p>This work brings together fashion imagery and portraiture: editorial lines, fabric and movement on one side, and honest connection and personality on the other—often in the same session or project.</p>\n<p>For fashion and lookbook-style shots, we align on mood, references, and pacing; I use natural and controlled light and careful composition so tailoring, texture, and silhouette read clearly on camera.</p>\n<p>For portraits—personal or professional—I prioritise an environment where you can relax and be yourself, so expression and character come through without feeling forced.</p>\n<p>Whether you need portfolio material, campaign stills, headshots, or a blend of styled and natural frames, we shape the day around your goals so the images work across web, print, and social.</p>"
+      },
+      "events": {
+        "name": "Events",
+        "pageTitle": "Events in Oslo",
+        "shortDescription": "Corporate and social event photography",
+        "fullDescriptionHtml": "<p>Event photography requires the ability to be present and observant, capturing the atmosphere and energy of gatherings both large and small. From corporate functions to social celebrations, each event has its own character and moments worth preserving.</p>\n<p>I approach event photography with a documentary style, focusing on capturing the natural flow of the event rather than interrupting it. My goal is to document the atmosphere, the interactions between people, and the details that make each event memorable.</p>\n<p>Whether it's a corporate conference, a product launch, a birthday celebration, or a cultural event, I work to understand the purpose and atmosphere of the gathering, ensuring the photographs reflect what made it special.</p>\n<p>Good event photography is about being in the right place at the right time, observing the moments that matter, and creating images that tell the story of the event in a way that feels authentic and engaging.</p>"
+      },
+      "advertisment": {
+        "name": "Advertisement",
+        "pageTitle": "Advertising & commercial in Oslo",
+        "shortDescription": "Product, food, and brand imagery for campaigns and print",
+        "fullDescriptionHtml": "<p>Advertising photography turns what you sell or stand for into visuals that stop people mid-scroll and read clearly in print. Clarity, colour, and composition all serve the message.</p>\n<p>I plan each shot around your brief—props, surfaces, and lighting that fit your brand voice. Food, products, lifestyle scenes, and detail shots can all be built in a consistent style so your campaign feels unified.</p>\n<p>Whether you need images for a menu, web shop, brochure, or social ads, we align on deliverables and formats up front so the files are ready for designers and marketers.</p>\n<p>Great commercial work is both precise and inviting: accurate to your offer while still feeling human. I aim for images that work hard for your business and sit naturally alongside the rest of your brand.</p>"
+      }
+    }
+  },
+  "galleryPage": {
+    "metadata": {
+      "title": "Gallery",
+      "description": "Selected work — weddings, couples & family, baptisms, fashion & portraits, events, and advertising in Oslo and beyond."
+    },
+    "header": {
+      "eyebrow": "Portfolio",
+      "title": "Moments in no particular order",
+      "lead": "A living wall of frames — built to grow. Tap through categories on the home page for stories; this is the raw rhythm of the work.",
+      "enquire": "Enquire"
+    },
+    "framesCount": "{count} frames",
+    "homeLink": "← Home",
+    "fallbackAlt": "Gallery photograph",
+    "fallbackCaption": "Frame",
+    "ariaLabel": "Image gallery"
+  },
+  "blog": {
+    "section": {
+      "eyebrow": "Blog",
+      "title": "Notes on photography",
+      "description": "Practical ideas for weddings, family moments, and portraits in Oslo and Norway — written for couples and families planning a shoot.",
+      "readArticle": "Read article",
+      "minRead": "{minutes} min read"
+    },
+    "post": {
+      "journal": "Journal",
+      "backToBlog": "← Back to blog",
+      "category": "Photography",
+      "planningTitle": "Planning a shoot in Oslo?",
+      "planningLead": "Share your date, location, and what you want the photos to feel like — I will get back to you as soon as I can.",
+      "getInTouch": "Get in touch",
+      "moreArticles": "More articles"
+    },
+    "posts": {
+      "natural-light-wedding-photography-oslo": {
+        "title": "Natural Light Wedding Photography in Oslo: What to Plan For",
+        "metaDescription": "Practical tips for natural light wedding photography in Oslo: seasons, venues, timelines, and how to work with your photographer for timeless images.",
+        "keywords": "Oslo wedding photography|natural light wedding|Norway wedding photographer|outdoor wedding Oslo",
+        "coverAlt": "Natural light wedding photography in Oslo, Norway",
+        "excerpt": "How daylight, season, and venue choice shape your wedding photos in Oslo — and what to discuss with your photographer before the day.",
+        "bodyHtml": "<p>Most couples in Oslo want wedding photos that feel <strong>honest and unforced</strong>. Natural light is often the simplest way to get that look — but it only works if your timeline and locations line up with how the sun really behaves in Norway.</p>\n<h2>Light in Oslo changes with the season</h2>\n<p>Winter weddings mean shorter days and soft, low light for much of the afternoon. Summer gives long evenings — ideal for portraits after dinner without losing that golden, warm quality. If you are booking a photographer, share your <strong>ceremony time and venue address</strong> early so they can plan where you will stand for vows, group photos, and couple portraits.</p>\n<h2>Venues: windows, gardens, and open shade</h2>\n<p>Historic buildings, hotels, and coastal venues around Oslo all behave differently. Large windows can give beautiful directional light on cloudy days. Outdoor spots often look best in <strong>open shade</strong> (not deep forest shade, which can turn skin tones cold). Your photographer can scout or suggest timing so you are not fighting harsh midday contrast.</p>\n<h2>What to ask on a call</h2>\n<p>Ask how they handle low light indoors, whether they use flash in a tasteful way when needed, and how they <strong>protect the mood of the day</strong> while still getting sharp, usable files. The goal is a mix of atmosphere and reliability — not one at the expense of the other.</p>"
+      },
+      "baptism-family-photographer-norway": {
+        "title": "Baptism & Family Events: Finding the Right Photographer in Norway",
+        "metaDescription": "What to look for in a baptism or family event photographer in Norway: discretion, experience with churches, and photos that feel calm and personal.",
+        "keywords": "baptism photography Norway|family event photographer Oslo|church photography Norway|barnedåp fotograf",
+        "coverAlt": "Baptism and family celebration photography in Norway",
+        "excerpt": "Baptisms and small family gatherings need a photographer who moves quietly, respects the space, and still catches real connection between people.",
+        "bodyHtml": "<p>Christenings, confirmations, and intimate family celebrations are <strong>short and emotional</strong>. The best images rarely come from loud direction — they come from someone who reads the room and stays out of the way until the right moment.</p>\n<h2>Churches, chapels, and private venues</h2>\n<p>Rules vary: some places allow movement only in certain areas, or restrict flash. A photographer who has worked in <strong>similar spaces in Norway</strong> will set expectations before the day. If the ceremony is in a language or tradition that is new to the photographer, a quick briefing from you helps them anticipate key moments.</p>\n<h2>Group photos without losing the day</h2>\n<p>It helps to name one family member who can help gather people for a short list of must-have groups. The rest of the time can stay loose — <strong>candid connection</strong> between parents, godparents, and children usually ages better than long posed sessions in a hallway.</p>\n<h2>What you receive afterward</h2>\n<p>Ask about delivery time, how files are shared, and whether you can print albums through the photographer. Clear, written answers save stress after an already busy weekend.</p>"
+      },
+      "authentic-portrait-photography-oslo": {
+        "title": "Authentic Portraits in Oslo: Relaxed Posing That Still Looks Intentional",
+        "metaDescription": "How Oslo portrait photographers help you look natural on camera: movement, real environments, and why “not posing” is still a skill — written for people who dislike stiff photos.",
+        "keywords": "portrait photography Oslo|authentic portraits Norway|lifestyle photography Oslo|professional headshots Oslo",
+        "coverAlt": "Outdoor portrait session with natural, relaxed posing in Oslo",
+        "excerpt": "Why the best portrait sessions feel more like a walk and a conversation than a studio performance — and how to prepare without overthinking it.",
+        "bodyHtml": "<p>Many people say they are “awkward in front of the camera.” In practice, the issue is not you — it is <strong>empty space and no context</strong>. A good portrait session in Oslo should give you something to do, somewhere to be, and just enough structure that the images look considered instead of random.</p>\n<h2>Environment over backdrop</h2>\n<p>Neighborhoods, studios with character, and outdoor locations you actually like will show in your body language. A park you walk in, a café you use, or a quiet street near your home can beat a generic background because <strong>your attention goes outward</strong> instead of into worrying about the lens.</p>\n<h2>Direction without stiffness</h2>\n<p>“Not posing” often really means: small prompts, repeated a few times — walk, stand still, look out, look back, adjust your coat, laugh at something true. A photographer is there to <strong>compress time</strong> so the useful moments happen in twenty minutes, not two hours of discomfort.</p>\n<h2>Before the session</h2>\n<p>Sleep and hydration matter more than a new outfit. If you are deciding between two outfits, pick the one you can move in and that fits the season — Oslo weather is part of the story, not a mistake in the background.</p>"
+      }
+    }
+  },
+  "legal": {
+    "shell": {
+      "updatedLabel": "Last updated: {date}",
+      "eyebrow": "Legal",
+      "backToHome": "Back to home"
+    },
+    "privacy": {
+      "metadata": {
+        "title": "Privacy policy",
+        "description": "How Asimina Habipi Photography processes personal data in line with the GDPR, including your rights and how to contact us."
+      },
+      "title": "Privacy policy",
+      "lastUpdated": "16 January 2026",
+      "bodyHtml": "<p>This policy explains how <strong>Asimina Habipi Photography</strong> (\"we\", \"us\") processes personal data when you use this website, enquire about services, or work with us as a client. It is written with the UK/EU <strong>General Data Protection Regulation (GDPR)</strong> and, in Norway, the <strong>Personopplysningsloven</strong> in mind. It is for information and does not replace professional legal advice for your specific situation.</p>\n<h2>1. Data controller</h2>\n<p>The data controller is Asimina Habipi Photography, operating in Oslo, Norway. For any privacy-related questions you can contact us at {emailLink}.</p>\n<h2>2. What data we may collect</h2>\n<ul>\n<li><strong>Contact and enquiry data:</strong> for example your name, email address, phone number, event date, location, and the content of your message when you email us or use contact details on this site.</li>\n<li><strong>Contract and project data:</strong> information needed to deliver photography services, such as venue details, shot lists, or other information you choose to share.</li>\n<li><strong>Website usage data:</strong> basic technical data may be processed by our hosting and infrastructure providers (for example server logs, IP address in a security context, browser type) as described in your host’s documentation.</li>\n<li><strong>Cookie and preference data:</strong> as set out in our Cookie policy — for example your choice regarding optional cookies, stored in your browser where applicable.</li>\n</ul>\n<h2>3. Why we use your data (legal bases)</h2>\n<p>We process personal data on one or more of the following bases under the GDPR:</p>\n<ul>\n<li><strong>Contract:</strong> to take steps you request before a contract or to perform our photography agreement.</li>\n<li><strong>Legitimate interests:</strong> to respond to enquiries, run our business, improve the site, and keep IT and accounts secure, where these interests are not overridden by your rights.</li>\n<li><strong>Consent:</strong> where you have given clear consent (for example for optional, non-essential cookies or for certain marketing, if we offer it and you opt in).</li>\n<li><strong>Legal obligation:</strong> where the law requires us to retain or disclose information.</li>\n</ul>\n<h2>4. How long we keep data</h2>\n<p>We keep contact and project data for as long as needed to provide our services, manage our relationship with you, and meet legal, tax, and accounting requirements (typically a limited number of years, unless a longer period is required by law). Server logs and similar technical data are usually retained for short periods according to our hosting configuration.</p>\n<h2>5. Who we share data with</h2>\n<p>We do not sell your personal data. We may share it with:</p>\n<ul>\n<li>IT and hosting providers that make this website and our email or storage work;</li>\n<li>professional advisers when needed (for example accountants);</li>\n<li>public authorities when required by law.</li>\n</ul>\n<p>Where a processor is used, we require them to protect your data appropriately.</p>\n<h2>6. International transfers</h2>\n<p>If any provider processes data outside the European Economic Area (EEA), we will rely on appropriate safeguards recognised under the GDPR (such as Standard Contractual Clauses) where required.</p>\n<h2>7. Your rights</h2>\n<p>Depending on the situation, you may have the right to:</p>\n<ul>\n<li>request access to your personal data;</li>\n<li>ask for correction of inaccurate data;</li>\n<li>ask for erasure, restriction, or object to certain processing;</li>\n<li>withdraw consent at any time where processing is based on consent;</li>\n<li>lodge a complaint with a supervisory authority.</li>\n</ul>\n<p>In Norway, the supervisory authority is Datatilsynet. You can also contact the authority in your country of residence in the EEA/UK.</p>\n<p>To exercise your rights, email us at {emailLink}. We may need to confirm your identity before replying.</p>\n<h2>8. Security</h2>\n<p>We use reasonable technical and organisational measures to protect personal data against loss and misuse.</p>\n<h2>9. Changes to this policy</h2>\n<p>We may update this page from time to time. The \"Last updated\" date at the top will change when we do.</p>"
+    },
+    "cookies": {
+      "metadata": {
+        "title": "Cookie policy",
+        "description": "What cookies and similar technologies Asimina Habipi Photography uses, and how to control your choices."
+      },
+      "title": "Cookie policy",
+      "lastUpdated": "16 January 2026",
+      "bodyHtml": "<p>This policy explains how <strong>Asimina Habipi Photography</strong> uses cookies and similar technologies on this website, and how you can control your choices. It should be read together with our Privacy policy.</p>\n<h2>1. What are cookies and similar technologies?</h2>\n<p>A <strong>cookie</strong> is a small text file placed on your device by a website. We also use <strong>similar technologies</strong> such as <strong>local storage</strong> in your browser to remember your preferences (for example your cookie choice) without necessarily sending a classic HTTP cookie to our servers.</p>\n<h2>2. How we ask for your consent</h2>\n<p>When you first visit, you will see a banner with <strong>Accept all</strong> and <strong>Essential only</strong>. Your choice is stored in your browser (as described below) so we do not show the same banner on every visit. You can change your mind at any time by clearing site data for this domain in your browser settings, after which the banner will appear again.</p>\n<h2>3. What we use in practice</h2>\n<h3>Strictly necessary / essential</h3>\n<p>These are needed for the site to work or to comply with your explicit request:</p>\n<ul>\n<li>Basic delivery of pages and security (as provided by the hosting or framework).</li>\n<li>A record of your <strong>cookie choice</strong> in <strong>local storage</strong> (key such as <code>asimina-cookie-consent</code>) so the consent banner is not shown repeatedly. This is treated as a necessary feature of our consent interface.</li>\n</ul>\n<h3>Optional (only if you click \"Accept all\")</h3>\n<p>If you choose <strong>Accept all</strong>, you agree that we may also use any optional, non-essential features we add in the future to improve the site (for example analytics to understand how the site is used, in an aggregated way). <strong>Until such tools are actually enabled, only essential storage applies.</strong> This policy will be updated if we add specific named cookies or third-party services.</p>\n<p>If you choose <strong>Essential only</strong>, we do not rely on that optional layer for the choice you have just signalled. We only keep what is essential, including the consent record itself.</p>\n<h2>4. Third-party services</h2>\n<p>This site is built to minimise third-party tracking. If we embed content or tools from other providers (for example video or map embeds), their cookies may apply — we will update this page when that is the case.</p>\n<h2>5. Managing cookies in your browser</h2>\n<p>You can block or delete cookies and local storage through your browser settings. Note that removing stored data may sign you out of other sites or clear your consent, causing our banner to show again.</p>\n<h2>6. Your rights and contact</h2>\n<p>For more on how we process personal data, including your rights under the GDPR, see the Privacy policy. Questions: contact us at {emailLink}.</p>"
+    }
+  },
+  "footer": {
+    "tagline": "Photographer based in Oslo — weddings, couples & family, baptisms, fashion & portraits, events, and advertising.",
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn"
+    },
+    "quickLinks": {
+      "title": "Quick Links"
+    },
+    "categories": {
+      "title": "Categories"
+    },
+    "contact": {
+      "title": "Contact",
+      "location": "Oslo, Norway",
+      "sendMessage": "Send a message"
+    },
+    "copyright": "© {year} Asimina Habipi Photography",
+    "rightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy policy",
+    "cookiePolicy": "Cookie policy",
+    "developedWith": "Developed with <heart>♥</heart> by <agency>SEFAWEB</agency>"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "lead": "Have a project in mind? I'd love to hear from you — share your dates, location, and what you want the pictures to feel like."
+  },
+  "about": {
+    "title": "About Me",
+    "descriptionHtml": "<p>I'm a photographer based in Oslo, focused on capturing people, places, and atmosphere as they naturally exist.</p>\n<p>My work explores emotion, identity, and the subtle connection between individuals and their surroundings. I approach photography with patience, observing rather than interrupting, allowing moments to unfold on their own.</p>\n<p>I'm not interested in forced poses or artificial perfection. What draws me in are real expressions, quiet details, and the atmosphere that often goes unnoticed.</p>\n<p>Whether I'm photographing people, events, or spaces, my aim is simple: to create images that feel honest, personal, and alive. The strongest photographs happen when people feel at ease, when they are not performing, but simply being.</p>",
+    "imageAlt": "Asimina Habipi - Photographer",
+    "profileAltFallback": "Profile"
+  },
+  "heroContent": {
+    "title": "Photographer in Oslo\nfor Weddings, Couples & Family,\nBaptism, Fashion — Portraits, Events & Advertising",
+    "subtitleHtml": "Capturing real moments with a timeless, cinematic style",
+    "imageAlt": "Asimina Habipi — photographer in Oslo"
+  },
+  "cookieConsent": {
+    "title": "Cookies & your privacy",
+    "description": "We use optional cookies to improve the site and remember this choice. Essential cookies are always on so the site can function. By clicking \"Accept all\" you agree to the use of optional cookies as described in our <cookiePolicy>Cookie policy</cookiePolicy> and <privacyPolicy>Privacy policy</privacyPolicy>. You can change your mind at any time by clearing site data in your browser.",
+    "essentialOnly": "Essential only",
+    "acceptAll": "Accept all"
+  },
+  "floatingSocial": {
+    "openMenu": "Open social menu",
+    "closeMenu": "Close social menu"
+  },
+  "scrollingGallery": {
+    "imageAlt": "Gallery image {index}",
+    "overlay": {
+      "title": "View Our Album",
+      "lead": "Explore Our Work"
+    }
+  },
+  "lightbox": {
+    "viewerLabel": "Image viewer",
+    "close": "Close",
+    "previous": "Previous image",
+    "next": "Next image",
+    "imageAlt": "Selected image"
+  },
+  "contactRings": {
+    "responseTime": "I read every message myself — usually within a day or two."
+  },
+  "galleryComponent": {
+    "eyebrow": "Portfolio",
+    "title": "Gallery",
+    "empty": "No images available yet. Add images in WordPress to see them here.",
+    "imageAlt": "Gallery image {index}",
+    "close": "Close",
+    "selectedAlt": "Selected image",
+    "clickOutside": "Click outside to close"
+  }
+}
+

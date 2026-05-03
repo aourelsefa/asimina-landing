@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useLocale, useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/navigation'
 import { mockContact } from '@/data/mockData'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 /** Smooth-scroll anchor offset — keep in sync with nav bar height (logo + vertical padding). */
 const NAV_ANCHOR_OFFSET_PX = 136
@@ -42,6 +43,9 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
+  const locale = useLocale()
+  const t = useTranslations('navigation')
+  const siteT = useTranslations('site')
   const isHomePage = pathname === '/'
 
   useEffect(() => {
@@ -53,11 +57,11 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
-    { href: '#about', label: 'About' },
-    { href: '#categories', label: 'Categories' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '#blog', label: 'Blog' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#about', label: t('items.about') },
+    { href: '#categories', label: t('items.categories') },
+    { href: '/gallery', label: t('items.gallery') },
+    { href: '#blog', label: t('items.blog') },
+    { href: '#contact', label: t('items.contact') },
   ]
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -65,7 +69,7 @@ export default function Navigation() {
     
     // If not on homepage, navigate to homepage first
     if (!isHomePage) {
-      window.location.href = `/${href}`
+      window.location.href = `/${locale}/${href}`
       return
     }
     
@@ -111,7 +115,7 @@ export default function Navigation() {
             >
               <Image
                 src="/asimina-habipi-logo.png"
-                alt="Asimina Habipi Photography"
+                alt={siteT('title')}
                 width={280}
                 height={90}
                 priority
@@ -129,7 +133,7 @@ export default function Navigation() {
             >
               <Image
                 src="/asimina-habipi-logo.png"
-                alt="Asimina Habipi Photography"
+                alt={siteT('title')}
                 width={280}
                 height={90}
                 priority
@@ -140,7 +144,10 @@ export default function Navigation() {
 
           {/* Desktop: contact row + rule + menu */}
           <div className="hidden md:flex min-w-0 flex-col items-end justify-center gap-2.5">
-            <NavContactStrip shouldShowScrolled={shouldShowScrolled} />
+            <div className="flex w-full items-center justify-end gap-4">
+              <LanguageSwitcher variant={shouldShowScrolled ? 'light' : 'dark'} />
+              <NavContactStrip shouldShowScrolled={shouldShowScrolled} />
+            </div>
             <div
               className={`flex w-full min-w-max items-center justify-end gap-10 border-t pt-3 lg:gap-12 ${
                 shouldShowScrolled ? 'border-gray-200' : 'border-white/30'
@@ -187,7 +194,7 @@ export default function Navigation() {
               shouldShowScrolled ? 'text-gray-900' : 'text-white'
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={t('mobile.toggleMenu')}
           >
             <svg
               className="w-6 h-6"
@@ -217,6 +224,9 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-6 space-y-6">
+            <div className="flex justify-end">
+              <LanguageSwitcher variant={shouldShowScrolled ? 'light' : 'dark'} />
+            </div>
             <div
               className={`flex flex-col gap-3 rounded-sm border px-4 py-3 ${
                 shouldShowScrolled
@@ -229,7 +239,7 @@ export default function Navigation() {
                   shouldShowScrolled ? 'text-gray-500' : 'text-white/60'
                 }`}
               >
-                Reach out
+                {t('mobile.reachOut')}
               </p>
               <div className="flex flex-col gap-2.5 text-sm">
                 <a

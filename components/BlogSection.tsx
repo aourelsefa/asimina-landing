@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { blogPosts } from '@/data/blogPosts'
 
 function formatDate(iso: string) {
@@ -11,16 +12,16 @@ function formatDate(iso: string) {
 }
 
 export default function BlogSection() {
+  const t = useTranslations('blog.section')
+  const postT = useTranslations('blog.posts')
+
   return (
     <section id="blog" className="bg-[#f0efec] border-t border-gray-200/80 py-20 text-gray-900 md:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-gray-500">Blog</span>
-          <h2 className="mt-2 font-serif text-4xl font-bold text-gray-900 md:text-5xl">Notes on photography</h2>
-          <p className="mt-3 text-gray-600">
-            Practical ideas for weddings, family moments, and portraits in Oslo and Norway — written for couples and
-            families planning a shoot.
-          </p>
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-gray-500">{t('eyebrow')}</span>
+          <h2 className="mt-2 font-serif text-4xl font-bold text-gray-900 md:text-5xl">{t('title')}</h2>
+          <p className="mt-3 text-gray-600">{t('description')}</p>
         </div>
 
         <ul className="grid gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
@@ -33,7 +34,7 @@ export default function BlogSection() {
                 <div className="relative aspect-[3/2] w-full overflow-hidden">
                   <Image
                     src={post.coverImage.src}
-                    alt={post.coverImage.alt}
+                    alt={postT(`${post.slug}.coverAlt`)}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -44,14 +45,14 @@ export default function BlogSection() {
                     className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-gray-400"
                     dateTime={post.publishedAt}
                   >
-                    {formatDate(post.publishedAt)} · {post.readTimeMinutes} min read
+                    {formatDate(post.publishedAt)} · {t('minRead', { minutes: post.readTimeMinutes })}
                   </time>
                   <h3 className="mt-2 font-serif text-lg font-bold leading-snug text-gray-900 group-hover:underline group-hover:decoration-gray-400 group-hover:underline-offset-2 md:text-xl">
-                    {post.title}
+                    {postT(`${post.slug}.title`)}
                   </h3>
-                  <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-gray-600">{post.excerpt}</p>
+                  <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-gray-600">{postT(`${post.slug}.excerpt`)}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-gray-800">
-                    Read article
+                    {t('readArticle')}
                     <span aria-hidden className="transition group-hover:translate-x-0.5">
                       →
                     </span>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { contactPhoneE164Digits, socialInstagramUrl } from '@/data/mockData'
 
 const viberChatHref = `viber://chat?number=%2B${contactPhoneE164Digits}`
@@ -61,6 +62,7 @@ const socialLinks = [
 
 export default function FloatingSocialButton() {
   const [isOpen, setIsOpen] = useState(false)
+  const t = useTranslations('floatingSocial')
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
@@ -89,7 +91,7 @@ export default function FloatingSocialButton() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-center w-14 h-14 rounded-full bg-gray-900 text-white shadow-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-        aria-label={isOpen ? 'Close social menu' : 'Open social menu'}
+        aria-label={isOpen ? t('closeMenu') : t('openMenu')}
       >
         <svg
           className={`w-6 h-6 transition-transform duration-300 ${isOpen ? 'rotate-12' : ''}`}
