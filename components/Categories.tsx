@@ -6,11 +6,11 @@ import { categoryServiceCardAlt } from '@/data/mockData'
 
 /** Cover art per category — one image from each `public/<folder>`. */
 const serviceCoverById: Record<string, string> = {
-  wedding: '/wedding/ASI_4389-2.jpg',
+  wedding: '/wedding/DIO_9007.jpg',
   'couples-family': '/Couples/DIO_6894.jpg',
   baptism: '/vaptism/vaptisi-kerkyrak-12.jpg',
   'fashion-portraits': '/fashion/DIO_2673.jpg',
-  events: '/events/ASI_6094.jpg',
+  events: '/events/galatsi%2029_06-88.jpg',
   advertisment: '/advertisment/DIO_4400.jpg',
 }
 
