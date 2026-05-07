@@ -207,7 +207,6 @@ export const fashion_files = [
 ] as const
 
 export const portraits_files = [
-  "_DSC0350-2.jpg",
   "_DSC0350.jpg",
   "backstage_26.jpg",
   "bw1.jpg",
