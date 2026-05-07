@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { headers } from 'next/headers'
+import { Analytics } from '@vercel/analytics/react'
 import { defaultSiteUrl } from '@/lib/site'
 import './globals.css'
 
@@ -52,6 +53,7 @@ export default function RootLayout({
           `}
         </Script>
         {children}
+        <Analytics />
       </body>
     </html>
   )
