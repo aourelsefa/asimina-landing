@@ -6,7 +6,9 @@ import ScrollingGallery from '@/components/ScrollingGallery'
 import Contact from '@/components/Contact'
 import BlogSection from '@/components/BlogSection'
 import { getTranslations } from 'next-intl/server'
-import { mockAbout, mockGallery, mockContact, mockHero, socialInstagramUrl } from '@/data/mockData'
+import { mockAbout, mockContact, mockHero, socialInstagramUrl } from '@/data/mockData'
+import { getGalleryImages } from '@/lib/portfolioImages'
+import { getBlogPosts } from '@/lib/blogPosts'
 import { coerceLocale } from '@/lib/locale'
 import { getSiteUrl } from '@/lib/site'
 import { localeAlternates, localizedPath } from '@/lib/seo'
@@ -54,6 +56,8 @@ export default async function Home({ params }: HomeProps) {
   const messages = (await import(`../../messages/${locale}.json`)).default as { site: { title: string } }
   const siteTitle = messages.site.title
   const baseUrl = getSiteUrl()
+  const galleryImages = await getGalleryImages()
+  const blogPosts = await getBlogPosts(locale)
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -134,7 +138,7 @@ export default async function Home({ params }: HomeProps) {
             </h2>
             <div className="w-24 h-px bg-white/30 mx-auto" />
           </div>
-          <ScrollingGallery images={mockGallery} variant="minimal" />
+          <ScrollingGallery images={galleryImages} variant="minimal" />
         </div>
       </section>
       <Contact
@@ -144,7 +148,7 @@ export default async function Home({ params }: HomeProps) {
         phone={mockContact.phone}
         address={mockContact.address}
       />
-      <BlogSection />
+      <BlogSection posts={blogPosts} locale={locale} />
     </main>
   )
 }

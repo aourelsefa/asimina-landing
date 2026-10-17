@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import { mockGallery } from '@/data/mockData'
+import { getGalleryImages } from '@/lib/portfolioImages'
 import { coerceLocale } from '@/lib/locale'
 import { localeAlternates, localizedPath } from '@/lib/seo'
 
@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: GalleryProps): Promise<Metada
 }
 
 export default async function GalleryPage() {
+  const galleryImages = await getGalleryImages()
   const t = await getTranslations('galleryPage')
   const headerT = await getTranslations('galleryPage.header')
   return (
@@ -68,7 +69,7 @@ export default async function GalleryPage() {
       <section className="mx-auto max-w-[1800px] px-2 py-8 sm:px-4 md:py-12" aria-label={t('ariaLabel')}>
         <div className="mb-6 flex flex-wrap items-end justify-between gap-3 border-b border-black/10 pb-4">
           <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-gray-500">
-            {t('framesCount', { count: mockGallery.length })}
+            {t('framesCount', { count: galleryImages.length })}
           </p>
           <Link
             href="/"
@@ -79,7 +80,7 @@ export default async function GalleryPage() {
         </div>
 
         <ul className="columns-3 gap-x-2 sm:columns-4 sm:gap-x-2.5 md:columns-5 lg:columns-6 lg:gap-x-3 xl:columns-7 2xl:columns-8">
-          {mockGallery.map((image, index) => (
+          {galleryImages.map((image, index) => (
             <li key={image.id} className="mb-2 break-inside-avoid sm:mb-2.5">
               <figure className="group relative overflow-hidden rounded-md bg-gray-300/80 shadow-[0_1px_0_rgba(0,0,0,0.06)] ring-1 ring-black/[0.04] transition duration-300 hover:z-[1] hover:-translate-y-0.5 hover:rotate-[0.4deg] hover:shadow-lg hover:ring-black/10">
                 <div className="relative w-full">

@@ -1,15 +1,16 @@
 import type { MetadataRoute } from 'next'
-import { blogSlugs } from '@/data/blogPosts'
 import { categoryIds } from '@/data/categories'
 import { locales } from '@/i18n/routing'
 import { getSiteUrl } from '@/lib/site'
 import { localizedPath } from '@/lib/seo'
+import { getAllBlogSlugs } from '@/lib/blogPosts'
 
 const staticSegments: (string | undefined)[] = [undefined, 'gallery', 'privacy', 'cookies']
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = getSiteUrl()
   const entries: MetadataRoute.Sitemap = []
+  const blogSlugs = await getAllBlogSlugs()
 
   for (const locale of locales) {
     for (const seg of staticSegments) {

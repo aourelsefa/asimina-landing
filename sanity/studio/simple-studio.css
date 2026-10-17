@@ -1,0 +1,69 @@
+/**
+ * Simplified Sanity Studio — stable selectors only (data-ui / aria-label).
+ * Applied to all users via SimpleStudioLayout.
+ */
+
+/* —— Top navbar: hide search, help, trial/plan links, presence —— */
+.simple-studio [data-ui='SearchButton'],
+.simple-studio button[aria-label='Open search'],
+.simple-studio button[aria-label='Search'],
+.simple-studio button[aria-label='Help'],
+.simple-studio a[aria-label='Help'],
+.simple-studio button[aria-label='Keyboard shortcuts'],
+.simple-studio [data-ui='Presence'],
+.simple-studio [data-testid='studio-navbar-presence'] {
+  display: none !important;
+}
+
+/* Trial, upgrade, plan, billing (often in top-right cluster) */
+.simple-studio a[href*='sanity.io/manage'],
+.simple-studio a[href*='sanity.io/pricing'],
+.simple-studio a[href*='sanity.io/get-started'],
+.simple-studio button[aria-label*='trial' i],
+.simple-studio button[aria-label*='Upgrade' i],
+.simple-studio [data-ui='Text'][data-size='1']:has(+ a[href*='sanity.io']) {
+  display: none !important;
+}
+
+/* Top growth / upsell bars (outside main nav) */
+.simple-studio [data-ui='Card'][data-tone='primary'][href],
+.simple-studio [data-ui='Card'][data-tone='caution']:has(a[href*='sanity.io']),
+.simple-studio [role='banner']:has(a[href*='sanity.io/manage']) {
+  display: none !important;
+}
+
+/* Tool switcher (only one tool — Photos) */
+.simple-studio [data-ui='ToolMenu'] {
+  display: none !important;
+}
+
+/* Workspace label "default" / org switcher */
+.simple-studio [data-ui='WorkspacePreview'] {
+  display: none !important;
+}
+
+/* Right cluster: hide trial, help, etc. — keep account (UserMenu) */
+.simple-studio [data-ui='Navbar'] [data-ui='Flex']:last-child > *:not([data-ui='UserMenu']) {
+  display: none !important;
+}
+
+/* Extra trial / plan chips that sit in the navbar row */
+.simple-studio [data-ui='Navbar'] [data-ui='Badge'],
+.simple-studio [data-ui='Navbar'] [data-ui='Label'],
+.simple-studio [data-ui='Navbar'] [data-ui='Stack']:not(:has([data-ui='UserMenu'])) {
+  display: none !important;
+}
+
+/* —— Structure panes: no create (+) —— */
+.simple-studio button[aria-label='Create'],
+.simple-studio button[aria-label='Create new document'],
+.simple-studio [data-testid='action-intent-create'],
+.simple-studio [data-testid='pane-header-create-button'] {
+  display: none !important;
+}
+
+/* Vision tool tab (if plugin is installed) */
+.simple-studio a[href*='/vision'],
+.simple-studio [data-tool-name='vision'] {
+  display: none !important;
+}

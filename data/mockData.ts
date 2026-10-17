@@ -15,7 +15,7 @@ import {
 export const PHOTOGRAPHER_IMAGE_ALT_BRAND = 'Asimina Habipi Photography'
 
 /** Short topic segment per service (English; screen readers + SEO). */
-const serviceImageAltTopic: Record<CategoryId, string> = {
+export const serviceImageAltTopic: Record<CategoryId, string> = {
   wedding: 'Wedding',
   'couples-family': 'Couples and family',
   baptism: 'Baptism',

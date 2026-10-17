@@ -8,6 +8,6 @@ export const config = {
   // - API routes
   // - Next.js internals
   // - static files
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
+  matcher: ['/((?!api|_next|studio|.*\\..*).*)'],
 }
 

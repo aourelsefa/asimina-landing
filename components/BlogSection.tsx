@@ -1,19 +1,28 @@
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import { blogPosts } from '@/data/blogPosts'
+import type { AppLocale } from '@/i18n/routing'
+import type { BlogPostSummary } from '@/lib/blogPosts'
 
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString('en-GB', {
+type BlogSectionProps = {
+  posts: BlogPostSummary[]
+  locale: AppLocale
+}
+
+function formatDate(iso: string, locale: AppLocale) {
+  return new Date(iso).toLocaleDateString(locale === 'nb' ? 'nb-NO' : 'en-GB', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
   })
 }
 
-export default function BlogSection() {
-  const t = useTranslations('blog.section')
-  const postT = useTranslations('blog.posts')
+export default async function BlogSection({ posts, locale }: BlogSectionProps) {
+  const t = await getTranslations('blog.section')
+
+  if (posts.length === 0) {
+    return null
+  }
 
   return (
     <section
@@ -31,7 +40,7 @@ export default function BlogSection() {
         </div>
 
         <ul className="grid gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
-          {blogPosts.map((post) => (
+          {posts.map((post) => (
             <li key={post.slug}>
               <Link
                 href={`/blog/${post.slug}`}
@@ -40,7 +49,7 @@ export default function BlogSection() {
                 <div className="relative aspect-[3/2] w-full overflow-hidden">
                   <Image
                     src={post.coverImage.src}
-                    alt={postT(`${post.slug}.coverAlt`)}
+                    alt={post.coverImage.alt}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-[1.03]"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -51,12 +60,12 @@ export default function BlogSection() {
                     className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-gray-400"
                     dateTime={post.publishedAt}
                   >
-                    {formatDate(post.publishedAt)} · {t('minRead', { minutes: post.readTimeMinutes })}
+                    {formatDate(post.publishedAt, locale)} · {t('minRead', { minutes: post.readTimeMinutes })}
                   </time>
                   <h3 className="mt-2 font-serif text-lg font-bold leading-snug text-gray-900 group-hover:underline group-hover:decoration-gray-400 group-hover:underline-offset-2 md:text-xl">
-                    {postT(`${post.slug}.title`)}
+                    {post.title}
                   </h3>
-                  <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-gray-600">{postT(`${post.slug}.excerpt`)}</p>
+                  <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-gray-600">{post.excerpt}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-gray-800">
                     {t('readArticle')}
                     <span aria-hidden className="transition group-hover:translate-x-0.5">
